@@ -10,16 +10,23 @@ import UIKit
 
 import FacebookLogin
 import FacebookCore
+import FBSDKCoreKit
 import FBSDKLoginKit
 
 class IDPFacebookViewController: UIViewController {
 
+    let myLoginButton = LoginButton(readPermissions: [ .publicProfile, .email, .userFriends ])
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if AccessToken.current != nil {
+            print (getFriends(funcP: fetchProfile))
+        }
+        
         //prepareLoginButton()
-        //showEmailAddress()
         addCustomButton()
+    
         
     }
 
@@ -44,8 +51,6 @@ class IDPFacebookViewController: UIViewController {
         myLoginButton.center = view.center;
         myLoginButton.setTitle("My Login Button", for: .normal)
         
-        //myLoginButton = LoginButton(readPermissions: [ .publicProfile, .email, .userFriends ])
-        
         // Handle clicks on the button
         myLoginButton.addTarget(self, action: #selector(self.loginButtonClicked), for: .touchUpInside)
         
@@ -61,29 +66,52 @@ class IDPFacebookViewController: UIViewController {
                 print(error)
             case .cancelled:
                 print("User cancelled login.")
-            case .success( _, _, _):
-                print("Logged in!")
+            case .success(let grantedPermissions, let declinedPermissions, let accessToken):
+                let result = self.getFriends(funcP: self.fetchProfile)
+                print(result)
             }
         }
     }
-    
-    func showEmailAddress() {
-        let request = GraphRequest.init(graphPath: "/me/friends")
 
-        request.start { (response, result) in
-            switch result {
-            case .failed(let error):
-                print("error in graph request:--------------------", error)
-                break
-                
-            case .success(let graphResponse):
-                if let responseDictionary = graphResponse.dictionaryValue {
-                    
-                    print(responseDictionary["data"] as Any)
-                }
+    public func getFriends(funcP: @escaping (Any?)->Void) -> Any {
+        let fbRequestFriends: FBSDKGraphRequest = FBSDKGraphRequest(
+            graphPath:"me/friends",
+            parameters:["fields": "id,name,about,gender,birthday,email,picture,friends.limit(100){picture,name}"])
+        
+        fbRequestFriends.start { (connection, result, error) in
+            if error == nil && result != nil {
+                funcP(result)
+            } else {
+                print("Error +++++++++++++++++++++++++++\(String(describing: error))")
             }
-            
-            print("===================================== %@", result)
+        }
+        return "getFriends"
+    }
+/*
+    func fetchProfile(result:Any?) {
+        
+        print("fetch profile-----------------------------------------------------------------")
+        
+        let dic = result as! NSDictionary
+
+        print("Request Friends result : \(dic)")
+    }
+*/
+    
+    func fetchProfile(result:Any?) {
+        
+        print("fetch profile")
+        
+        let dictionary = result as! NSDictionary
+        
+        let friends = dictionary.value(forKey: "data") as! NSArray
+        var count = 1
+        if let array = friends as? [NSDictionary] {
+            for friend : NSDictionary in array {
+                let name = friend.value(forKey: "name") as! NSString
+                print("\(count) \(name)")
+                count += 1
+            }
         }
     }
     
