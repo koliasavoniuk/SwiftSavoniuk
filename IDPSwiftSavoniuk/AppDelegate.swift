@@ -8,6 +8,10 @@
 
 import UIKit
 
+import FBSDKCoreKit
+import FacebookLogin
+import FacebookCore
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -15,7 +19,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+                
+        let window = UIWindow.init(frame: UIScreen.main.bounds)
+        
+        self.window = window
+        
+        window.rootViewController = IDPFacebookViewController()
+        
+        window.backgroundColor = UIColor.white
+        
+        window.makeKeyAndVisible()
+
         return true
     }
 
@@ -41,6 +55,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    func application(_ application: UIApplication, open url: URL,
+                     options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool
+    {
+        let handled = FBSDKApplicationDelegate.sharedInstance()
+        
+        handled?.application(application, open:url, options:options)
+        
+        return (handled != nil)
+    }
 
 }
 
