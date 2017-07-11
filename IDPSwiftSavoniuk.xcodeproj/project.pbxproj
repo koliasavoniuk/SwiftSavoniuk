@@ -15,6 +15,7 @@
 		7622CC541F0F7346009C3254 /* FacebookCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7622CC531F0F7346009C3254 /* FacebookCore.framework */; };
 		764CC24C1F14BA88008A648D /* DownloadFriendsContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764CC24B1F14BA88008A648D /* DownloadFriendsContext.swift */; };
 		764CC24E1F14BA9C008A648D /* UserDataObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764CC24D1F14BA9C008A648D /* UserDataObject.swift */; };
+		764CC2501F14E7E6008A648D /* TestContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764CC24F1F14E7E6008A648D /* TestContext.swift */; };
 		769B73731F13ABD5001507BE /* BaseContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769B73721F13ABD5001507BE /* BaseContext.swift */; };
 		81A5FFEFF5C96BA60D52BACB /* Pods_IDPSwiftSavoniuk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE405330725CD4DC367CCA40 /* Pods_IDPSwiftSavoniuk.framework */; };
 /* End PBXBuildFile section */
@@ -31,6 +32,7 @@
 		7622CC531F0F7346009C3254 /* FacebookCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookCore.framework; path = "../../Library/Developer/Xcode/DerivedData/IDPSwiftSavoniuk-gfcatsdnkiypfxeojlgbsxgabuwf/Build/Products/Debug-iphonesimulator/FacebookCore/FacebookCore.framework"; sourceTree = "<group>"; };
 		764CC24B1F14BA88008A648D /* DownloadFriendsContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadFriendsContext.swift; sourceTree = "<group>"; };
 		764CC24D1F14BA9C008A648D /* UserDataObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDataObject.swift; sourceTree = "<group>"; };
+		764CC24F1F14E7E6008A648D /* TestContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestContext.swift; sourceTree = "<group>"; };
 		769B73721F13ABD5001507BE /* BaseContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseContext.swift; sourceTree = "<group>"; };
 		97F85CEBE27F71C143515761 /* Pods-IDPSwiftSavoniuk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IDPSwiftSavoniuk.release.xcconfig"; path = "Pods/Target Support Files/Pods-IDPSwiftSavoniuk/Pods-IDPSwiftSavoniuk.release.xcconfig"; sourceTree = "<group>"; };
 		CE405330725CD4DC367CCA40 /* Pods_IDPSwiftSavoniuk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IDPSwiftSavoniuk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,6 +122,7 @@
 			children = (
 				764CC24B1F14BA88008A648D /* DownloadFriendsContext.swift */,
 				764CC24D1F14BA9C008A648D /* UserDataObject.swift */,
+				764CC24F1F14E7E6008A648D /* TestContext.swift */,
 			);
 			path = DownloadFriendsDCI;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 				764CC24C1F14BA88008A648D /* DownloadFriendsContext.swift in Sources */,
 				760317F31F13A8F400E3D951 /* ViewController.swift in Sources */,
 				764CC24E1F14BA9C008A648D /* UserDataObject.swift in Sources */,
+				764CC2501F14E7E6008A648D /* TestContext.swift in Sources */,
 				760317F81F13A8F700E3D951 /* IDPFacebookViewController.swift in Sources */,
 				769B73731F13ABD5001507BE /* BaseContext.swift in Sources */,
 				760317F11F13A8F400E3D951 /* AppDelegate.swift in Sources */,

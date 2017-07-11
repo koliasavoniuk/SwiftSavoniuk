@@ -1,5 +1,5 @@
 //
-//  DownloadFriendsContext.swift
+//  TestDCI.swift
 //  IDPSwiftSavoniuk
 //
 //  Created by Student002 on 7/11/17.
@@ -9,7 +9,7 @@
 import Foundation
 import FBSDKCoreKit
 
-class DownloadFriendsContext: baseContext {
+class TestContext: baseContext {
     override func execute() {
         getFriends()
     }
@@ -23,17 +23,11 @@ class DownloadFriendsContext: baseContext {
         fbRequestFriends.start { (connection, result, error) in
             
             if error == nil && result != nil {
-                
                 let dictionary = result as! NSDictionary
-                
-                let friends = dictionary.value(forKey: "data") as! NSArray
-                var count = 1
-                if let array = friends as? [NSDictionary] {
-                    for friend : NSDictionary in array {
-                        let name = friend.value(forKey: "name") as! NSString
-                        print("\(count) \(name)")
-                        count += 1
-                    }
+                let friendsss = dictionary.value(forKey: "data") as! NSArray
+
+                if let array = friendsss as? [NSDictionary] {
+                    userDataObject().friends = friendsss
                 }
                 
             } else {
@@ -42,3 +36,6 @@ class DownloadFriendsContext: baseContext {
         }
     }
 }
+
+
+

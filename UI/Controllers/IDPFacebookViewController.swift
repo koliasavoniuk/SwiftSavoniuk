@@ -47,7 +47,8 @@ class IDPFacebookViewController: UIViewController {
             case .cancelled:
                 print("User cancelled login.")
             case .success( _, _, _):
-             DownloadFriendsContext().execute()
+                //DownloadFriendsContext().execute()
+                TestContext().execute()
             }
         }
     }

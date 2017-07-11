@@ -9,5 +9,9 @@
 import Foundation
 
 struct userDataObject {
-    var friends: NSDictionary
+    var friends: NSArray
+    let name: NSString
+    let gender: NSString
+    let email: NSString
+    let pictureURL: NSURL
 }
