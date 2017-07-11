@@ -19,10 +19,6 @@ class IDPFacebookViewController: UIViewController {
         super.viewDidLoad()
         
         addCustomButton()
-        
-        if AccessToken.current != nil {
-            print (getFriends(funcP: fetchProfile))
-        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -51,42 +47,8 @@ class IDPFacebookViewController: UIViewController {
             case .cancelled:
                 print("User cancelled login.")
             case .success( _, _, _):
-                let result = self.getFriends(funcP: self.fetchProfile)
-                print(result)
+             DownloadFriendsContext().execute()
             }
         }
     }
-
-    public func getFriends(funcP: @escaping (Any?)->Void) -> Any {
-        let fbRequestFriends: FBSDKGraphRequest = FBSDKGraphRequest(
-            graphPath:"me/friends",
-            parameters:["fields": "id,name,about,gender,birthday,email,picture,friends{picture,name}"])
-        
-        fbRequestFriends.start { (connection, result, error) in
-            if error == nil && result != nil {
-                funcP(result)
-            } else {
-                print("Error\(String(describing: error))")
-            }
-        }
-        return "getFriends"
-    }
-
-    func fetchProfile(result:Any?) {
-        
-        print("fetch profile")
-        
-        let dictionary = result as! NSDictionary
-        
-        let friends = dictionary.value(forKey: "data") as! NSArray
-        var count = 1
-        if let array = friends as? [NSDictionary] {
-            for friend : NSDictionary in array {
-                let name = friend.value(forKey: "name") as! NSString
-                print("\(count) \(name)")
-                count += 1
-            }
-        }
-    }
-    
 }
