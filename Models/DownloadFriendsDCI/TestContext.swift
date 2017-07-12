@@ -15,6 +15,7 @@ class TestContext: baseContext {
     }
     
     public func getFriends() {
+        
         let fbRequestFriends: FBSDKGraphRequest =
             FBSDKGraphRequest(
                 graphPath:"me/friends",
@@ -24,10 +25,13 @@ class TestContext: baseContext {
             
             if error == nil && result != nil {
                 let dictionary = result as! NSDictionary
-                let friendsss = dictionary.value(forKey: "data") as! NSArray
+                let friends = dictionary.value(forKey: "data") as! NSArray
 
-                if let array = friendsss as? [NSDictionary] {
-                    userDataObject().friends = friendsss
+                if let array = friends as? [NSDictionary] {
+                    let user = IDPUser(id: "1", name:"Vasia")
+                    user.initFriends(friends: friends as! Array<Any>)
+                    //let someUserDataObject = userDataObject()
+                    //someUserDataObject().friends = friends
                 }
                 
             } else {
@@ -36,6 +40,3 @@ class TestContext: baseContext {
         }
     }
 }
-
-
-
