@@ -9,7 +9,7 @@
 import Foundation
 import FBSDKCoreKit
 
-class DownloadFriendsContext: baseContext {
+class DownloadFriendsContext: IDPBaseContext {
     override func execute() {
         getFriends()
     }

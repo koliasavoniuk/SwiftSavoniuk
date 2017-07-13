@@ -9,7 +9,7 @@
 import Foundation
 import FBSDKCoreKit
 
-class TestContext: baseContext {
+class TestContext: IDPBaseContext {
     override func execute() {
         getFriends()
     }
@@ -18,20 +18,20 @@ class TestContext: baseContext {
         
         let fbRequestFriends: FBSDKGraphRequest =
             FBSDKGraphRequest(
-                graphPath:"me/friends",
+                graphPath:"me",
                 parameters:["fields": "id,name,gender,email,picture,friends{picture,name}"])
         
         fbRequestFriends.start { (connection, result, error) in
             
             if error == nil && result != nil {
                 let dictionary = result as! NSDictionary
-                let friends = dictionary.value(forKey: "data") as! NSArray
+                //let friends = dictionary.value(forKey: "data") as! NSArray
+                let friends = dictionary.value(forKey: "friends/data") as! NSArray
 
-                if let array = friends as? [NSDictionary] {
-                    let user = IDPUser(id: "1", name:"Vasia")
-                    user.initFriends(friends: friends as! Array<Any>)
-                    //let someUserDataObject = userDataObject()
-                    //someUserDataObject().friends = friends
+                if friends is [NSDictionary] {
+                    let user = IDPUser()
+                   
+                    user.showFriends()
                 }
                 
             } else {

@@ -1,5 +1,5 @@
 //
-//  BaseContext.swift
+//  IDPBaseContext.swift
 //  IDPSwiftSavoniuk
 //
 //  Created by Student002 on 7/10/17.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-class baseContext : NSObject {
+class IDPBaseContext : NSObject {
 
     func execute () {
         
@@ -17,5 +17,4 @@ class baseContext : NSObject {
     func cancel () {
         
     }
-    
 }

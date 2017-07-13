@@ -1,5 +1,5 @@
 //
-//  UsersArray.swift
+//  IDPUsersModel.swift
 //  IDPSwiftSavoniuk
 //
 //  Created by Student002 on 7/12/17.
@@ -36,5 +36,4 @@ class IDPUsersModel: NSObject {
             removeObject(object: object)
         }
     }
-    
 }

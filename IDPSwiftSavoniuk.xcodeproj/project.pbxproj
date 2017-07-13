@@ -14,10 +14,12 @@
 		7622CC521F0F7343009C3254 /* FacebookLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7622CC511F0F7343009C3254 /* FacebookLogin.framework */; };
 		7622CC541F0F7346009C3254 /* FacebookCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7622CC531F0F7346009C3254 /* FacebookCore.framework */; };
 		764CC24C1F14BA88008A648D /* DownloadFriendsContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764CC24B1F14BA88008A648D /* DownloadFriendsContext.swift */; };
-		764CC24E1F14BA9C008A648D /* UserDataObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764CC24D1F14BA9C008A648D /* UserDataObject.swift */; };
+		764CC24E1F14BA9C008A648D /* IDPUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764CC24D1F14BA9C008A648D /* IDPUser.swift */; };
 		764CC2501F14E7E6008A648D /* TestContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764CC24F1F14E7E6008A648D /* TestContext.swift */; };
-		7658C5F51F166BDB00BA037D /* UsersArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7658C5F41F166BDB00BA037D /* UsersArray.swift */; };
-		769B73731F13ABD5001507BE /* BaseContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769B73721F13ABD5001507BE /* BaseContext.swift */; };
+		7656789F1F1789E90037E284 /* IDPFillUserContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7656789E1F1789E90037E284 /* IDPFillUserContext.swift */; };
+		765678A11F179B080037E284 /* IDPConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765678A01F179B080037E284 /* IDPConstants.swift */; };
+		7658C5F51F166BDB00BA037D /* IDPUsersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7658C5F41F166BDB00BA037D /* IDPUsersModel.swift */; };
+		769B73731F13ABD5001507BE /* IDPBaseContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769B73721F13ABD5001507BE /* IDPBaseContext.swift */; };
 		81A5FFEFF5C96BA60D52BACB /* Pods_IDPSwiftSavoniuk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE405330725CD4DC367CCA40 /* Pods_IDPSwiftSavoniuk.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,10 +34,12 @@
 		7622CC511F0F7343009C3254 /* FacebookLogin.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookLogin.framework; path = "../../Library/Developer/Xcode/DerivedData/IDPSwiftSavoniuk-gfcatsdnkiypfxeojlgbsxgabuwf/Build/Products/Debug-iphonesimulator/FacebookLogin/FacebookLogin.framework"; sourceTree = "<group>"; };
 		7622CC531F0F7346009C3254 /* FacebookCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookCore.framework; path = "../../Library/Developer/Xcode/DerivedData/IDPSwiftSavoniuk-gfcatsdnkiypfxeojlgbsxgabuwf/Build/Products/Debug-iphonesimulator/FacebookCore/FacebookCore.framework"; sourceTree = "<group>"; };
 		764CC24B1F14BA88008A648D /* DownloadFriendsContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadFriendsContext.swift; sourceTree = "<group>"; };
-		764CC24D1F14BA9C008A648D /* UserDataObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDataObject.swift; sourceTree = "<group>"; };
+		764CC24D1F14BA9C008A648D /* IDPUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDPUser.swift; sourceTree = "<group>"; };
 		764CC24F1F14E7E6008A648D /* TestContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestContext.swift; sourceTree = "<group>"; };
-		7658C5F41F166BDB00BA037D /* UsersArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersArray.swift; sourceTree = "<group>"; };
-		769B73721F13ABD5001507BE /* BaseContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseContext.swift; sourceTree = "<group>"; };
+		7656789E1F1789E90037E284 /* IDPFillUserContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDPFillUserContext.swift; sourceTree = "<group>"; };
+		765678A01F179B080037E284 /* IDPConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDPConstants.swift; sourceTree = "<group>"; };
+		7658C5F41F166BDB00BA037D /* IDPUsersModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDPUsersModel.swift; sourceTree = "<group>"; };
+		769B73721F13ABD5001507BE /* IDPBaseContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDPBaseContext.swift; sourceTree = "<group>"; };
 		97F85CEBE27F71C143515761 /* Pods-IDPSwiftSavoniuk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IDPSwiftSavoniuk.release.xcconfig"; path = "Pods/Target Support Files/Pods-IDPSwiftSavoniuk/Pods-IDPSwiftSavoniuk.release.xcconfig"; sourceTree = "<group>"; };
 		CE405330725CD4DC367CCA40 /* Pods_IDPSwiftSavoniuk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IDPSwiftSavoniuk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -123,9 +127,10 @@
 			isa = PBXGroup;
 			children = (
 				764CC24B1F14BA88008A648D /* DownloadFriendsContext.swift */,
-				764CC24D1F14BA9C008A648D /* UserDataObject.swift */,
+				764CC24D1F14BA9C008A648D /* IDPUser.swift */,
 				764CC24F1F14E7E6008A648D /* TestContext.swift */,
-				7658C5F41F166BDB00BA037D /* UsersArray.swift */,
+				7658C5F41F166BDB00BA037D /* IDPUsersModel.swift */,
+				7656789E1F1789E90037E284 /* IDPFillUserContext.swift */,
 			);
 			path = DownloadFriendsDCI;
 			sourceTree = "<group>";
@@ -133,6 +138,7 @@
 		768781D31F13A0C70017F573 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				765678A01F179B080037E284 /* IDPConstants.swift */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -149,7 +155,7 @@
 		768781D51F13A0CA0017F573 /* BaseDCI */ = {
 			isa = PBXGroup;
 			children = (
-				769B73721F13ABD5001507BE /* BaseContext.swift */,
+				769B73721F13ABD5001507BE /* IDPBaseContext.swift */,
 			);
 			path = BaseDCI;
 			sourceTree = "<group>";
@@ -286,12 +292,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				764CC24C1F14BA88008A648D /* DownloadFriendsContext.swift in Sources */,
+				765678A11F179B080037E284 /* IDPConstants.swift in Sources */,
 				760317F31F13A8F400E3D951 /* ViewController.swift in Sources */,
-				764CC24E1F14BA9C008A648D /* UserDataObject.swift in Sources */,
+				7656789F1F1789E90037E284 /* IDPFillUserContext.swift in Sources */,
+				764CC24E1F14BA9C008A648D /* IDPUser.swift in Sources */,
 				764CC2501F14E7E6008A648D /* TestContext.swift in Sources */,
-				7658C5F51F166BDB00BA037D /* UsersArray.swift in Sources */,
+				7658C5F51F166BDB00BA037D /* IDPUsersModel.swift in Sources */,
 				760317F81F13A8F700E3D951 /* IDPFacebookViewController.swift in Sources */,
-				769B73731F13ABD5001507BE /* BaseContext.swift in Sources */,
+				769B73731F13ABD5001507BE /* IDPBaseContext.swift in Sources */,
 				760317F11F13A8F400E3D951 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
