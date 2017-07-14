@@ -14,8 +14,6 @@ import FacebookCore
 class IDPLoginContext: IDPBaseContext {
     
     override func execute(object: Any) {
-        
-        
         let loginManager = LoginManager()
         loginManager.logIn([ .publicProfile, .email, .userFriends ], viewController: object as! IDPLoginViewController) { loginResult in
             switch loginResult {
@@ -27,8 +25,5 @@ class IDPLoginContext: IDPBaseContext {
                 IDPFillUserContext().execute(object: self)
             }
         }
-        
-        
     }
-    
 }
