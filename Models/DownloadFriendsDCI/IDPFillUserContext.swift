@@ -26,7 +26,6 @@ class IDPFillUserContext: IDPBaseContext {
                 user.initWithDictionary(dictionary: dictionary)
                 let usersModel = IDPUsersModel()
                 usersModel.addObject(object: user)
-                print("Fill+-*/*-++-*/**--++--**//--+--*//*-+")
             } else {
                 print("Error\(String(describing: error))")
             }

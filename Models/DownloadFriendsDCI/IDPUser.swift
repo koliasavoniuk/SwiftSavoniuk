@@ -33,5 +33,4 @@ class IDPUser: NSObject {
     func getFriends() -> NSDictionary {
         return self.friends
     }
-    
 }

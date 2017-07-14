@@ -22,8 +22,8 @@
 		7675ECBC1F18D5E000472D44 /* IDPLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7675ECBA1F18D5E000472D44 /* IDPLoginViewController.xib */; };
 		7675ECBF1F18DBAA00472D44 /* IDPFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7675ECBD1F18DBAA00472D44 /* IDPFriendsViewController.swift */; };
 		7675ECC01F18DBAA00472D44 /* IDPFriendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7675ECBE1F18DBAA00472D44 /* IDPFriendsViewController.xib */; };
-		7675ECC41F18DD2F00472D44 /* IDPTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7675ECC21F18DD2F00472D44 /* IDPTableViewCell.swift */; };
-		7675ECC51F18DD2F00472D44 /* IDPTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7675ECC31F18DD2F00472D44 /* IDPTableViewCell.xib */; };
+		7675ECC81F18F42200472D44 /* IDPUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7675ECC61F18F42200472D44 /* IDPUserCell.swift */; };
+		7675ECC91F18F42200472D44 /* IDPUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7675ECC71F18F42200472D44 /* IDPUserCell.xib */; };
 		769B73731F13ABD5001507BE /* IDPBaseContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769B73721F13ABD5001507BE /* IDPBaseContext.swift */; };
 		81A5FFEFF5C96BA60D52BACB /* Pods_IDPSwiftSavoniuk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE405330725CD4DC367CCA40 /* Pods_IDPSwiftSavoniuk.framework */; };
 /* End PBXBuildFile section */
@@ -47,8 +47,8 @@
 		7675ECBA1F18D5E000472D44 /* IDPLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IDPLoginViewController.xib; sourceTree = "<group>"; };
 		7675ECBD1F18DBAA00472D44 /* IDPFriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDPFriendsViewController.swift; sourceTree = "<group>"; };
 		7675ECBE1F18DBAA00472D44 /* IDPFriendsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IDPFriendsViewController.xib; sourceTree = "<group>"; };
-		7675ECC21F18DD2F00472D44 /* IDPTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDPTableViewCell.swift; sourceTree = "<group>"; };
-		7675ECC31F18DD2F00472D44 /* IDPTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IDPTableViewCell.xib; sourceTree = "<group>"; };
+		7675ECC61F18F42200472D44 /* IDPUserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDPUserCell.swift; sourceTree = "<group>"; };
+		7675ECC71F18F42200472D44 /* IDPUserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IDPUserCell.xib; sourceTree = "<group>"; };
 		769B73721F13ABD5001507BE /* IDPBaseContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDPBaseContext.swift; sourceTree = "<group>"; };
 		97F85CEBE27F71C143515761 /* Pods-IDPSwiftSavoniuk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IDPSwiftSavoniuk.release.xcconfig"; path = "Pods/Target Support Files/Pods-IDPSwiftSavoniuk/Pods-IDPSwiftSavoniuk.release.xcconfig"; sourceTree = "<group>"; };
 		CE405330725CD4DC367CCA40 /* Pods_IDPSwiftSavoniuk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IDPSwiftSavoniuk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -176,8 +176,8 @@
 		7675ECC11F18DC6900472D44 /* Private */ = {
 			isa = PBXGroup;
 			children = (
-				7675ECC21F18DD2F00472D44 /* IDPTableViewCell.swift */,
-				7675ECC31F18DD2F00472D44 /* IDPTableViewCell.xib */,
+				7675ECC61F18F42200472D44 /* IDPUserCell.swift */,
+				7675ECC71F18F42200472D44 /* IDPUserCell.xib */,
 			);
 			path = Private;
 			sourceTree = "<group>";
@@ -279,8 +279,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7675ECC91F18F42200472D44 /* IDPUserCell.xib in Resources */,
 				7675ECC01F18DBAA00472D44 /* IDPFriendsViewController.xib in Resources */,
-				7675ECC51F18DD2F00472D44 /* IDPTableViewCell.xib in Resources */,
 				7675ECBC1F18D5E000472D44 /* IDPLoginViewController.xib in Resources */,
 				761246381F13A74A00448E77 /* Default-568h@2x.png in Resources */,
 			);
@@ -342,10 +342,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				764CC24C1F14BA88008A648D /* DownloadFriendsContext.swift in Sources */,
-				7675ECC41F18DD2F00472D44 /* IDPTableViewCell.swift in Sources */,
 				765678A11F179B080037E284 /* IDPConstants.swift in Sources */,
 				760317F31F13A8F400E3D951 /* ViewController.swift in Sources */,
 				7675ECBF1F18DBAA00472D44 /* IDPFriendsViewController.swift in Sources */,
+				7675ECC81F18F42200472D44 /* IDPUserCell.swift in Sources */,
 				7675EC9C1F18ABC400472D44 /* IDPLoginContext.swift in Sources */,
 				7656789F1F1789E90037E284 /* IDPFillUserContext.swift in Sources */,
 				764CC24E1F14BA9C008A648D /* IDPUser.swift in Sources */,
