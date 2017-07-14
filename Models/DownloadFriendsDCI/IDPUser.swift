@@ -29,4 +29,9 @@ class IDPUser: NSObject {
         self.email = dictionary.value(forKey: constEmail) as! String
         self.friends = dictionary.value(forKey: constFriends) as! NSDictionary
     }
+    
+    func getFriends() -> NSDictionary {
+        return self.friends
+    }
+    
 }

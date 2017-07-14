@@ -24,7 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         self.window = window
         
-        window.rootViewController = IDPFacebookViewController()
+        //window.rootViewController = IDPFacebookViewController()
+        window.rootViewController = IDPLoginViewController()
         
         window.backgroundColor = UIColor.white
         

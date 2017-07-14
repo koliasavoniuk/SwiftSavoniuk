@@ -12,7 +12,7 @@ import FBSDKCoreKit
 
 class IDPFillUserContext: IDPBaseContext {
     
-    override func execute() {
+    override func execute(object: Any) {
         let fbRequestFriends: FBSDKGraphRequest =
             FBSDKGraphRequest(
                 graphPath:"me",
@@ -26,6 +26,7 @@ class IDPFillUserContext: IDPBaseContext {
                 user.initWithDictionary(dictionary: dictionary)
                 let usersModel = IDPUsersModel()
                 usersModel.addObject(object: user)
+                print("Fill+-*/*-++-*/**--++--**//--+--*//*-+")
             } else {
                 print("Error\(String(describing: error))")
             }

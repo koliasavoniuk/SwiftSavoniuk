@@ -1,31 +1,35 @@
 //
-//  IDPFacebookViewController.swift
+//  IDPLoginViewController.swift
 //  IDPSwiftSavoniuk
 //
-//  Created by Student002 on 7/7/17.
+//  Created by Student002 on 7/14/17.
 //  Copyright © 2017 Student002. All rights reserved.
 //
 
 import UIKit
 
-import FacebookLogin
-import FacebookCore
-import FBSDKCoreKit
-import FBSDKLoginKit
+class IDPLoginViewController: UIViewController {
 
-class IDPFacebookViewController: UIViewController {
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        IDPCustomButtonContext().execute(object: self)
+
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-    }
 
+    }
+    
+
+    @IBAction func onLogin(_ sender: UIButton) {
+        print("LoginViewController")
+        
+        sender.addTarget(self, action: #selector(self.loginButtonClick), for: .touchUpInside)
+        
+    }
+    
     func loginButtonClick() {
         IDPLoginContext().execute(object: self)
     }
+
 }

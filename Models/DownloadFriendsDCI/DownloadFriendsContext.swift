@@ -10,11 +10,7 @@ import Foundation
 import FBSDKCoreKit
 
 class DownloadFriendsContext: IDPBaseContext {
-    override func execute() {
-        getFriends()
-    }
-    
-    public func getFriends() {
+    override func execute(object: Any) {
         let fbRequestFriends: FBSDKGraphRequest =
             FBSDKGraphRequest(
                 graphPath:"me/friends",

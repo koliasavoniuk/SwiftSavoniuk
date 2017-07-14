@@ -10,7 +10,7 @@ import Foundation
 
 class IDPBaseContext : NSObject {
 
-    func execute () {
+    func execute (object: Any) {
         
     }
     

@@ -36,4 +36,13 @@ class IDPUsersModel: NSObject {
             removeObject(object: object)
         }
     }
+    
+    func objectAtIndex(index: Int) -> IDPUser {
+        return self.users[index] as! IDPUser
+    }
+    
+    func setObjectAtIndex(object: IDPUser, index: Int) {
+        self.users.insert(object, at: index)
+    }
+    
 }
