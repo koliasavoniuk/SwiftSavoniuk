@@ -8,10 +8,12 @@
 
 import Foundation
 
+typealias CompletionHandler = (_ success: Bool) -> Void
+
 class IDPBaseContext : NSObject {
 
-    func execute (object: Any) {
-        
+    func execute (object: Any, completionHandler: @escaping CompletionHandler) {
+        completionHandler(true)
     }
     
     func cancel () {

@@ -12,7 +12,7 @@ import FBSDKCoreKit
 
 class IDPFillUserContext: IDPBaseContext {
     
-    override func execute(object: Any) {
+    override func execute(object: Any, completionHandler: @escaping CompletionHandler) {
         let fbRequestFriends: FBSDKGraphRequest =
             FBSDKGraphRequest(
                 graphPath:"me",
@@ -21,6 +21,7 @@ class IDPFillUserContext: IDPBaseContext {
         fbRequestFriends.start { (connection, result, error) in
             
             if error == nil && result != nil {
+                completionHandler(true)
                 let user = IDPUser()
                 let dictionary = result as! NSDictionary
                 user.initWithDictionary(dictionary: dictionary)
