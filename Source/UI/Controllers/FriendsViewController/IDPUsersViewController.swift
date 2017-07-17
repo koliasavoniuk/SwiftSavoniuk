@@ -1,5 +1,5 @@
 //
-//  IDPFriendsViewController.swift
+//  IDPUsersViewController.swift
 //  IDPSwiftSavoniuk
 //
 //  Created by Student002 on 7/14/17.
@@ -8,8 +8,9 @@
 
 import UIKit
 
-class IDPFriendsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    var usersModel = IDPUsersModel()
+class IDPUsersViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+
+    var usersModel = IDPUsersModel.sharedInstance
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,6 +27,11 @@ class IDPFriendsViewController: UIViewController, UITableViewDelegate, UITableVi
         return usersModel.count
     }
     
-    
-    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let reusableCell = tableView.reusableCellWithClass(IDPUserCell.self, for: indexPath) { (result) in
+            result.user = (usersModel[indexPath.row] as! IDPUser)
+        }
+        
+        return reusableCell
+    }
 }

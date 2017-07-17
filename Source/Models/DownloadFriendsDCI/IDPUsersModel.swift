@@ -11,6 +11,9 @@ import Foundation
 class IDPUsersModel: NSObject {
     
     var users: NSMutableArray = []
+    
+    static let sharedInstance = IDPUsersModel()
+    
     var count: Int {
         get {
             return self.users.count
@@ -39,6 +42,10 @@ class IDPUsersModel: NSObject {
     
     func objectAtIndex(index: Int) -> IDPUser {
         return self.users[index] as! IDPUser
+    }
+    
+    subscript(index: Int) -> NSObject {
+        get { return self.users[index] as! NSObject }
     }
     
     func setObjectAtIndex(object: IDPUser, index: Int) {

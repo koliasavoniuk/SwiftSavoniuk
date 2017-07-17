@@ -8,22 +8,26 @@
 
 import UIKit
 
-class IDPUserCell: UITableViewCell {
+class IDPUserCell: IDPTableViewCell {
     
     @IBOutlet var userImageView: UIView?
     @IBOutlet var fullNameLabel: UILabel?
+    
+    var user: IDPUser? {
+        didSet {self.fillWithUser(user: user!)}
+    }
     
     func initCell() {
         self.fullNameLabel = UILabel()
         self.userImageView = UIView()
     }
-    
+    /*
     var user: IDPUser? {
         didSet {
             self.fillWithUser(user: user!)
         }
     }
-    
+    */
     func fillWithUser(user: IDPUser) {
         self.fullNameLabel?.text = user.name
     }

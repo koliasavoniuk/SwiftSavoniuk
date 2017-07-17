@@ -12,19 +12,25 @@
 		761246381F13A74A00448E77 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 761246371F13A74A00448E77 /* Default-568h@2x.png */; };
 		7622CC521F0F7343009C3254 /* FacebookLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7622CC511F0F7343009C3254 /* FacebookLogin.framework */; };
 		7622CC541F0F7346009C3254 /* FacebookCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7622CC531F0F7346009C3254 /* FacebookCore.framework */; };
-		764CC24C1F14BA88008A648D /* DownloadFriendsContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764CC24B1F14BA88008A648D /* DownloadFriendsContext.swift */; };
-		764CC24E1F14BA9C008A648D /* IDPUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764CC24D1F14BA9C008A648D /* IDPUser.swift */; };
-		7656789F1F1789E90037E284 /* IDPFillUserContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7656789E1F1789E90037E284 /* IDPFillUserContext.swift */; };
-		765678A11F179B080037E284 /* IDPConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765678A01F179B080037E284 /* IDPConstants.swift */; };
-		7658C5F51F166BDB00BA037D /* IDPUsersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7658C5F41F166BDB00BA037D /* IDPUsersModel.swift */; };
-		7675EC9C1F18ABC400472D44 /* IDPLoginContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7675EC9B1F18ABC400472D44 /* IDPLoginContext.swift */; };
-		7675ECBB1F18D5E000472D44 /* IDPLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7675ECB91F18D5E000472D44 /* IDPLoginViewController.swift */; };
-		7675ECBC1F18D5E000472D44 /* IDPLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7675ECBA1F18D5E000472D44 /* IDPLoginViewController.xib */; };
-		7675ECBF1F18DBAA00472D44 /* IDPFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7675ECBD1F18DBAA00472D44 /* IDPFriendsViewController.swift */; };
-		7675ECC01F18DBAA00472D44 /* IDPFriendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7675ECBE1F18DBAA00472D44 /* IDPFriendsViewController.xib */; };
-		7675ECC81F18F42200472D44 /* IDPUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7675ECC61F18F42200472D44 /* IDPUserCell.swift */; };
-		7675ECC91F18F42200472D44 /* IDPUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7675ECC71F18F42200472D44 /* IDPUserCell.xib */; };
-		769B73731F13ABD5001507BE /* IDPBaseContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769B73721F13ABD5001507BE /* IDPBaseContext.swift */; };
+		764A8E3F1F1C9A6E0052D034 /* IDPConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764A8E251F1C9A6E0052D034 /* IDPConstants.swift */; };
+		764A8E401F1C9A6E0052D034 /* IDPBaseContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764A8E291F1C9A6E0052D034 /* IDPBaseContext.swift */; };
+		764A8E411F1C9A6E0052D034 /* IDPLoginButtonContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764A8E2B1F1C9A6E0052D034 /* IDPLoginButtonContext.swift */; };
+		764A8E421F1C9A6E0052D034 /* DownloadFriendsContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764A8E2D1F1C9A6E0052D034 /* DownloadFriendsContext.swift */; };
+		764A8E431F1C9A6E0052D034 /* IDPFillUserContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764A8E2E1F1C9A6E0052D034 /* IDPFillUserContext.swift */; };
+		764A8E441F1C9A6E0052D034 /* IDPLoginContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764A8E2F1F1C9A6E0052D034 /* IDPLoginContext.swift */; };
+		764A8E451F1C9A6E0052D034 /* IDPUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764A8E301F1C9A6E0052D034 /* IDPUser.swift */; };
+		764A8E461F1C9A6E0052D034 /* IDPUsersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764A8E311F1C9A6E0052D034 /* IDPUsersModel.swift */; };
+		764A8E471F1C9A6E0052D034 /* IDPUsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764A8E361F1C9A6E0052D034 /* IDPUsersViewController.swift */; };
+		764A8E481F1C9A6E0052D034 /* IDPUsersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 764A8E371F1C9A6E0052D034 /* IDPUsersViewController.xib */; };
+		764A8E491F1C9A6E0052D034 /* IDPUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764A8E391F1C9A6E0052D034 /* IDPUserCell.swift */; };
+		764A8E4A1F1C9A6E0052D034 /* IDPUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 764A8E3A1F1C9A6E0052D034 /* IDPUserCell.xib */; };
+		764A8E4B1F1C9A6E0052D034 /* IDPLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764A8E3C1F1C9A6E0052D034 /* IDPLoginViewController.swift */; };
+		764A8E4C1F1C9A6E0052D034 /* IDPLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 764A8E3D1F1C9A6E0052D034 /* IDPLoginViewController.xib */; };
+		764A8E4E1F1C9B010052D034 /* UITableView+IDPExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764A8E4D1F1C9B010052D034 /* UITableView+IDPExtensions.swift */; };
+		764A8E501F1C9B420052D034 /* UINib+IDPExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764A8E4F1F1C9B420052D034 /* UINib+IDPExtensions.swift */; };
+		764A8E521F1C9B780052D034 /* Optional+IDPExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764A8E511F1C9B780052D034 /* Optional+IDPExtensions.swift */; };
+		764A8E541F1C9BD40052D034 /* NSArray+IDPExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764A8E531F1C9BD40052D034 /* NSArray+IDPExtensions.swift */; };
+		764A8E561F1CA20F0052D034 /* IDPTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764A8E551F1CA20F0052D034 /* IDPTableViewCell.swift */; };
 		81A5FFEFF5C96BA60D52BACB /* Pods_IDPSwiftSavoniuk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE405330725CD4DC367CCA40 /* Pods_IDPSwiftSavoniuk.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,19 +43,25 @@
 		7622CC3A1F0F693B009C3254 /* IDPSwiftSavoniuk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IDPSwiftSavoniuk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7622CC511F0F7343009C3254 /* FacebookLogin.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookLogin.framework; path = "../../Library/Developer/Xcode/DerivedData/IDPSwiftSavoniuk-gfcatsdnkiypfxeojlgbsxgabuwf/Build/Products/Debug-iphonesimulator/FacebookLogin/FacebookLogin.framework"; sourceTree = "<group>"; };
 		7622CC531F0F7346009C3254 /* FacebookCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookCore.framework; path = "../../Library/Developer/Xcode/DerivedData/IDPSwiftSavoniuk-gfcatsdnkiypfxeojlgbsxgabuwf/Build/Products/Debug-iphonesimulator/FacebookCore/FacebookCore.framework"; sourceTree = "<group>"; };
-		764CC24B1F14BA88008A648D /* DownloadFriendsContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadFriendsContext.swift; sourceTree = "<group>"; };
-		764CC24D1F14BA9C008A648D /* IDPUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDPUser.swift; sourceTree = "<group>"; };
-		7656789E1F1789E90037E284 /* IDPFillUserContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDPFillUserContext.swift; sourceTree = "<group>"; };
-		765678A01F179B080037E284 /* IDPConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDPConstants.swift; sourceTree = "<group>"; };
-		7658C5F41F166BDB00BA037D /* IDPUsersModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDPUsersModel.swift; sourceTree = "<group>"; };
-		7675EC9B1F18ABC400472D44 /* IDPLoginContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDPLoginContext.swift; sourceTree = "<group>"; };
-		7675ECB91F18D5E000472D44 /* IDPLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDPLoginViewController.swift; sourceTree = "<group>"; };
-		7675ECBA1F18D5E000472D44 /* IDPLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IDPLoginViewController.xib; sourceTree = "<group>"; };
-		7675ECBD1F18DBAA00472D44 /* IDPFriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDPFriendsViewController.swift; sourceTree = "<group>"; };
-		7675ECBE1F18DBAA00472D44 /* IDPFriendsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IDPFriendsViewController.xib; sourceTree = "<group>"; };
-		7675ECC61F18F42200472D44 /* IDPUserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDPUserCell.swift; sourceTree = "<group>"; };
-		7675ECC71F18F42200472D44 /* IDPUserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IDPUserCell.xib; sourceTree = "<group>"; };
-		769B73721F13ABD5001507BE /* IDPBaseContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDPBaseContext.swift; sourceTree = "<group>"; };
+		764A8E251F1C9A6E0052D034 /* IDPConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDPConstants.swift; sourceTree = "<group>"; };
+		764A8E291F1C9A6E0052D034 /* IDPBaseContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDPBaseContext.swift; sourceTree = "<group>"; };
+		764A8E2B1F1C9A6E0052D034 /* IDPLoginButtonContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDPLoginButtonContext.swift; sourceTree = "<group>"; };
+		764A8E2D1F1C9A6E0052D034 /* DownloadFriendsContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadFriendsContext.swift; sourceTree = "<group>"; };
+		764A8E2E1F1C9A6E0052D034 /* IDPFillUserContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDPFillUserContext.swift; sourceTree = "<group>"; };
+		764A8E2F1F1C9A6E0052D034 /* IDPLoginContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDPLoginContext.swift; sourceTree = "<group>"; };
+		764A8E301F1C9A6E0052D034 /* IDPUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDPUser.swift; sourceTree = "<group>"; };
+		764A8E311F1C9A6E0052D034 /* IDPUsersModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDPUsersModel.swift; sourceTree = "<group>"; };
+		764A8E361F1C9A6E0052D034 /* IDPUsersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDPUsersViewController.swift; sourceTree = "<group>"; };
+		764A8E371F1C9A6E0052D034 /* IDPUsersViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IDPUsersViewController.xib; sourceTree = "<group>"; };
+		764A8E391F1C9A6E0052D034 /* IDPUserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDPUserCell.swift; sourceTree = "<group>"; };
+		764A8E3A1F1C9A6E0052D034 /* IDPUserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IDPUserCell.xib; sourceTree = "<group>"; };
+		764A8E3C1F1C9A6E0052D034 /* IDPLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDPLoginViewController.swift; sourceTree = "<group>"; };
+		764A8E3D1F1C9A6E0052D034 /* IDPLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IDPLoginViewController.xib; sourceTree = "<group>"; };
+		764A8E4D1F1C9B010052D034 /* UITableView+IDPExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+IDPExtensions.swift"; sourceTree = "<group>"; };
+		764A8E4F1F1C9B420052D034 /* UINib+IDPExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINib+IDPExtensions.swift"; sourceTree = "<group>"; };
+		764A8E511F1C9B780052D034 /* Optional+IDPExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Optional+IDPExtensions.swift"; sourceTree = "<group>"; };
+		764A8E531F1C9BD40052D034 /* NSArray+IDPExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSArray+IDPExtensions.swift"; sourceTree = "<group>"; };
+		764A8E551F1CA20F0052D034 /* IDPTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDPTableViewCell.swift; sourceTree = "<group>"; };
 		97F85CEBE27F71C143515761 /* Pods-IDPSwiftSavoniuk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IDPSwiftSavoniuk.release.xcconfig"; path = "Pods/Target Support Files/Pods-IDPSwiftSavoniuk/Pods-IDPSwiftSavoniuk.release.xcconfig"; sourceTree = "<group>"; };
 		CE405330725CD4DC367CCA40 /* Pods_IDPSwiftSavoniuk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IDPSwiftSavoniuk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -90,11 +102,10 @@
 		7622CC311F0F693B009C3254 = {
 			isa = PBXGroup;
 			children = (
+				764A8E231F1C9A6E0052D034 /* Source */,
+				764A8E221F1C9A360052D034 /* Resources */,
 				761246371F13A74A00448E77 /* Default-568h@2x.png */,
 				760317ED1F13A8F400E3D951 /* IDPSwiftSavoniuk */,
-				7675ECA91F18D55E00472D44 /* UI */,
-				768781D41F13A0CA0017F573 /* Models */,
-				768781D31F13A0C70017F573 /* Library */,
 				7622CC3B1F0F693B009C3254 /* Products */,
 				3F85D7715FB2AF01C4C2A531 /* Pods */,
 				ABD20B5E5142F33D49B4D03B /* Frameworks */,
@@ -109,102 +120,141 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		764CC24A1F14BA58008A648D /* DownloadFriendsDCI */ = {
+		764A8E221F1C9A360052D034 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				764CC24B1F14BA88008A648D /* DownloadFriendsContext.swift */,
-				764CC24D1F14BA9C008A648D /* IDPUser.swift */,
-				7658C5F41F166BDB00BA037D /* IDPUsersModel.swift */,
-				7656789E1F1789E90037E284 /* IDPFillUserContext.swift */,
-				7675EC9B1F18ABC400472D44 /* IDPLoginContext.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		764A8E231F1C9A6E0052D034 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				764A8E241F1C9A6E0052D034 /* Library */,
+				764A8E271F1C9A6E0052D034 /* Models */,
+				764A8E321F1C9A6E0052D034 /* UI */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		764A8E241F1C9A6E0052D034 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				764A8E251F1C9A6E0052D034 /* IDPConstants.swift */,
+				764A8E261F1C9A6E0052D034 /* IDPExtensions */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		764A8E261F1C9A6E0052D034 /* IDPExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				764A8E4D1F1C9B010052D034 /* UITableView+IDPExtensions.swift */,
+				764A8E4F1F1C9B420052D034 /* UINib+IDPExtensions.swift */,
+				764A8E511F1C9B780052D034 /* Optional+IDPExtensions.swift */,
+				764A8E531F1C9BD40052D034 /* NSArray+IDPExtensions.swift */,
+			);
+			path = IDPExtensions;
+			sourceTree = "<group>";
+		};
+		764A8E271F1C9A6E0052D034 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				764A8E281F1C9A6E0052D034 /* BaseDCI */,
+				764A8E2A1F1C9A6E0052D034 /* Contexts */,
+				764A8E2C1F1C9A6E0052D034 /* DownloadFriendsDCI */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		764A8E281F1C9A6E0052D034 /* BaseDCI */ = {
+			isa = PBXGroup;
+			children = (
+				764A8E291F1C9A6E0052D034 /* IDPBaseContext.swift */,
+			);
+			path = BaseDCI;
+			sourceTree = "<group>";
+		};
+		764A8E2A1F1C9A6E0052D034 /* Contexts */ = {
+			isa = PBXGroup;
+			children = (
+				764A8E2B1F1C9A6E0052D034 /* IDPLoginButtonContext.swift */,
+			);
+			path = Contexts;
+			sourceTree = "<group>";
+		};
+		764A8E2C1F1C9A6E0052D034 /* DownloadFriendsDCI */ = {
+			isa = PBXGroup;
+			children = (
+				764A8E2D1F1C9A6E0052D034 /* DownloadFriendsContext.swift */,
+				764A8E2E1F1C9A6E0052D034 /* IDPFillUserContext.swift */,
+				764A8E2F1F1C9A6E0052D034 /* IDPLoginContext.swift */,
+				764A8E301F1C9A6E0052D034 /* IDPUser.swift */,
+				764A8E311F1C9A6E0052D034 /* IDPUsersModel.swift */,
 			);
 			path = DownloadFriendsDCI;
 			sourceTree = "<group>";
 		};
-		7675ECA91F18D55E00472D44 /* UI */ = {
+		764A8E321F1C9A6E0052D034 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				7675ECB51F18D5E000472D44 /* Controllers */,
-				7675ECB41F18D58800472D44 /* Views */,
+				764A8E331F1C9A6E0052D034 /* Controllers */,
+				764A8E3E1F1C9A6E0052D034 /* Views */,
 			);
 			path = UI;
 			sourceTree = "<group>";
 		};
-		7675ECB41F18D58800472D44 /* Views */ = {
+		764A8E331F1C9A6E0052D034 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		7675ECB51F18D5E000472D44 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				7675ECB61F18D5E000472D44 /* FriendsDetailViewController */,
-				7675ECB71F18D5E000472D44 /* FriendsViewController */,
-				7675ECB81F18D5E000472D44 /* LoginViewController */,
+				764A8E341F1C9A6E0052D034 /* FriendsDetailViewController */,
+				764A8E351F1C9A6E0052D034 /* FriendsViewController */,
+				764A8E3B1F1C9A6E0052D034 /* LoginViewController */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		7675ECB61F18D5E000472D44 /* FriendsDetailViewController */ = {
+		764A8E341F1C9A6E0052D034 /* FriendsDetailViewController */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = FriendsDetailViewController;
 			sourceTree = "<group>";
 		};
-		7675ECB71F18D5E000472D44 /* FriendsViewController */ = {
+		764A8E351F1C9A6E0052D034 /* FriendsViewController */ = {
 			isa = PBXGroup;
 			children = (
-				7675ECBD1F18DBAA00472D44 /* IDPFriendsViewController.swift */,
-				7675ECBE1F18DBAA00472D44 /* IDPFriendsViewController.xib */,
-				7675ECC11F18DC6900472D44 /* Private */,
+				764A8E361F1C9A6E0052D034 /* IDPUsersViewController.swift */,
+				764A8E371F1C9A6E0052D034 /* IDPUsersViewController.xib */,
+				764A8E381F1C9A6E0052D034 /* Private */,
 			);
 			path = FriendsViewController;
 			sourceTree = "<group>";
 		};
-		7675ECB81F18D5E000472D44 /* LoginViewController */ = {
+		764A8E381F1C9A6E0052D034 /* Private */ = {
 			isa = PBXGroup;
 			children = (
-				7675ECB91F18D5E000472D44 /* IDPLoginViewController.swift */,
-				7675ECBA1F18D5E000472D44 /* IDPLoginViewController.xib */,
-			);
-			path = LoginViewController;
-			sourceTree = "<group>";
-		};
-		7675ECC11F18DC6900472D44 /* Private */ = {
-			isa = PBXGroup;
-			children = (
-				7675ECC61F18F42200472D44 /* IDPUserCell.swift */,
-				7675ECC71F18F42200472D44 /* IDPUserCell.xib */,
+				764A8E391F1C9A6E0052D034 /* IDPUserCell.swift */,
+				764A8E3A1F1C9A6E0052D034 /* IDPUserCell.xib */,
+				764A8E551F1CA20F0052D034 /* IDPTableViewCell.swift */,
 			);
 			path = Private;
 			sourceTree = "<group>";
 		};
-		768781D31F13A0C70017F573 /* Library */ = {
+		764A8E3B1F1C9A6E0052D034 /* LoginViewController */ = {
 			isa = PBXGroup;
 			children = (
-				765678A01F179B080037E284 /* IDPConstants.swift */,
+				764A8E3C1F1C9A6E0052D034 /* IDPLoginViewController.swift */,
+				764A8E3D1F1C9A6E0052D034 /* IDPLoginViewController.xib */,
 			);
-			path = Library;
+			path = LoginViewController;
 			sourceTree = "<group>";
 		};
-		768781D41F13A0CA0017F573 /* Models */ = {
+		764A8E3E1F1C9A6E0052D034 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				764CC24A1F14BA58008A648D /* DownloadFriendsDCI */,
-				768781D51F13A0CA0017F573 /* BaseDCI */,
 			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		768781D51F13A0CA0017F573 /* BaseDCI */ = {
-			isa = PBXGroup;
-			children = (
-				769B73721F13ABD5001507BE /* IDPBaseContext.swift */,
-			);
-			path = BaseDCI;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		ABD20B5E5142F33D49B4D03B /* Frameworks */ = {
@@ -279,10 +329,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7675ECC91F18F42200472D44 /* IDPUserCell.xib in Resources */,
-				7675ECC01F18DBAA00472D44 /* IDPFriendsViewController.xib in Resources */,
-				7675ECBC1F18D5E000472D44 /* IDPLoginViewController.xib in Resources */,
+				764A8E4C1F1C9A6E0052D034 /* IDPLoginViewController.xib in Resources */,
 				761246381F13A74A00448E77 /* Default-568h@2x.png in Resources */,
+				764A8E481F1C9A6E0052D034 /* IDPUsersViewController.xib in Resources */,
+				764A8E4A1F1C9A6E0052D034 /* IDPUserCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,18 +391,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				764CC24C1F14BA88008A648D /* DownloadFriendsContext.swift in Sources */,
-				765678A11F179B080037E284 /* IDPConstants.swift in Sources */,
+				764A8E541F1C9BD40052D034 /* NSArray+IDPExtensions.swift in Sources */,
+				764A8E411F1C9A6E0052D034 /* IDPLoginButtonContext.swift in Sources */,
+				764A8E401F1C9A6E0052D034 /* IDPBaseContext.swift in Sources */,
+				764A8E471F1C9A6E0052D034 /* IDPUsersViewController.swift in Sources */,
+				764A8E461F1C9A6E0052D034 /* IDPUsersModel.swift in Sources */,
+				764A8E491F1C9A6E0052D034 /* IDPUserCell.swift in Sources */,
+				764A8E521F1C9B780052D034 /* Optional+IDPExtensions.swift in Sources */,
+				764A8E431F1C9A6E0052D034 /* IDPFillUserContext.swift in Sources */,
+				764A8E441F1C9A6E0052D034 /* IDPLoginContext.swift in Sources */,
+				764A8E451F1C9A6E0052D034 /* IDPUser.swift in Sources */,
 				760317F31F13A8F400E3D951 /* ViewController.swift in Sources */,
-				7675ECBF1F18DBAA00472D44 /* IDPFriendsViewController.swift in Sources */,
-				7675ECC81F18F42200472D44 /* IDPUserCell.swift in Sources */,
-				7675EC9C1F18ABC400472D44 /* IDPLoginContext.swift in Sources */,
-				7656789F1F1789E90037E284 /* IDPFillUserContext.swift in Sources */,
-				764CC24E1F14BA9C008A648D /* IDPUser.swift in Sources */,
-				7658C5F51F166BDB00BA037D /* IDPUsersModel.swift in Sources */,
-				769B73731F13ABD5001507BE /* IDPBaseContext.swift in Sources */,
+				764A8E501F1C9B420052D034 /* UINib+IDPExtensions.swift in Sources */,
+				764A8E3F1F1C9A6E0052D034 /* IDPConstants.swift in Sources */,
+				764A8E561F1CA20F0052D034 /* IDPTableViewCell.swift in Sources */,
+				764A8E4B1F1C9A6E0052D034 /* IDPLoginViewController.swift in Sources */,
+				764A8E4E1F1C9B010052D034 /* UITableView+IDPExtensions.swift in Sources */,
 				760317F11F13A8F400E3D951 /* AppDelegate.swift in Sources */,
-				7675ECBB1F18D5E000472D44 /* IDPLoginViewController.swift in Sources */,
+				764A8E421F1C9A6E0052D034 /* DownloadFriendsContext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
