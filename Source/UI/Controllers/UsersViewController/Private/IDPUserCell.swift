@@ -8,7 +8,7 @@
 
 import UIKit
 
-class IDPUserCell: IDPTableViewCell {
+class IDPUserCell: UITableViewCell {
     
     @IBOutlet var userImageView: UIView?
     @IBOutlet var fullNameLabel: UILabel?

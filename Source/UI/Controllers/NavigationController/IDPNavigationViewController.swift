@@ -13,6 +13,8 @@ import FacebookCore
 
 class IDPNavigationViewController: UINavigationController {
     
+    static let sharedInstanceNavigation = IDPNavigationViewController()
+    
     deinit {
         NotificationCenter.default.removeObserver(self, name:NSNotification.Name(rawValue:kIDPAuthorizationDidChange), object: nil)
     }
@@ -20,13 +22,11 @@ class IDPNavigationViewController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.pushLoginViewController()
-        self.authorizationDidFinish()
-        // Do any additional setup after loading the view.
+        //self.authorizationDidFinish()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     func pushLoginViewController() {
@@ -36,16 +36,17 @@ class IDPNavigationViewController: UINavigationController {
     func pushUsersViewController() {
         self.pushViewController(IDPUsersViewController.viewController(), animated: true)
     }
-    
-    private func authorizationDidFinish() {
+
+    func authorizationDidFinish() {
         NotificationCenter.default.addObserver(
              forName: NSNotification.Name(rawValue:kIDPAuthorizationDidChange),
               object: nil,
                queue: nil) { (Notification) in
                 if AccessToken.current != nil {
+                    
                     self.pushViewController(IDPUsersViewController.viewController(), animated: true)
                 }
         }
     }
-    
+
 }

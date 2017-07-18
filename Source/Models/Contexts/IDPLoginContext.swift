@@ -24,9 +24,11 @@ class IDPLoginContext: IDPBaseContext {
             case .success( _, _, let accessToken):
                 AccessToken.current = accessToken
                 completionHandler(true)
-                IDPFillUserContext().execute(object: self) {_ in
-                    print("FillUserContext")
+                //IDPFillUserContext().execute(object: self) {_ in
+                //}
+                IDPFillArrayContext().execute(object: self) {_ in
                 }
+
             }
         }
     }

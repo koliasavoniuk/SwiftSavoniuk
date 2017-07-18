@@ -15,6 +15,11 @@ class IDPUser: NSObject {
     var email: String = ""
     var friends: NSDictionary = [:]
     
+    init(id: String, name: String) {
+        self.id = id
+        self.name = name
+    }
+    
     func initWithDictionary (dictionary: NSDictionary) {
         self.id = dictionary.value(forKey: constId) as! String
         self.name = dictionary.value(forKey: constName) as! String
