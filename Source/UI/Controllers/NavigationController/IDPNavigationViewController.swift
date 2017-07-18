@@ -15,14 +15,9 @@ class IDPNavigationViewController: UINavigationController {
     
     static let sharedInstanceNavigation = IDPNavigationViewController()
     
-    deinit {
-        NotificationCenter.default.removeObserver(self, name:NSNotification.Name(rawValue:kIDPAuthorizationDidChange), object: nil)
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.pushLoginViewController()
-        //self.authorizationDidFinish()
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,15 +33,19 @@ class IDPNavigationViewController: UINavigationController {
     }
 
     func authorizationDidFinish() {
+                    self.pushViewController(IDPUsersViewController.viewController(), animated: true)
+    }
+    /*
+    func authorizationDidFinish() {
         NotificationCenter.default.addObserver(
-             forName: NSNotification.Name(rawValue:kIDPAuthorizationDidChange),
-              object: nil,
-               queue: nil) { (Notification) in
+            forName: NSNotification.Name(rawValue:kIDPAuthorizationDidChange),
+            object: nil,
+            queue: nil) { (Notification) in
                 if AccessToken.current != nil {
                     
                     self.pushViewController(IDPUsersViewController.viewController(), animated: true)
                 }
         }
     }
-
+    */
 }

@@ -8,20 +8,14 @@
 
 import UIKit
 
-class IDPLoginViewController: UIViewController {
+class IDPLoginViewController: IDPViewController {
     
-    public var didFinishAuthorization = false {
-        didSet {
-            NotificationCenter.default.post(
-                name: NSNotification.Name(rawValue:kIDPAuthorizationDidChange),
-                object: nil, userInfo: [:])
-        }
-    }
+    var loginContext: IDPLoginContext?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.navigationController?.navigationBar.isHidden = true
+        loginContext = IDPLoginContext()
+        self.observer = loginContext?.observationController(observer: self)
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,8 +23,18 @@ class IDPLoginViewController: UIViewController {
     }
 
     @IBAction func onLogin(_ sender: UIButton) {
-        IDPLoginContext().execute(object: self) { _ in
-            self.didFinishAuthorization = true
-        }
+        loginContext?.execute(object: self)
     }
+    
+    //MARK: IDPViewController override
+    override func prepare(observer: IDPObservationController?) {
+        let handler = {(controller: IDPObservationController, userInfo: Any?) ->
+            Void in
+            let usersViewController = IDPUsersViewController()
+            usersViewController.arrayModel = IDPArrayModel()
+            self.navigationController?.pushViewController(usersViewController, animated: true)
+        }
+        
+        observer?.set(handler: handler, for: IDPContextState.didLoad.rawValue)
+    } 
 }

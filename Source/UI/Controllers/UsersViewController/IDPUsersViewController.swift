@@ -8,7 +8,7 @@
 
 import UIKit
 
-class IDPUsersViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class IDPUsersViewController: IDPViewController, UITableViewDelegate, UITableViewDataSource {
     
     var arrayModel = IDPArrayModel.sharedInstance
     override func viewDidLoad() {

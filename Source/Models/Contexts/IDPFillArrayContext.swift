@@ -15,7 +15,7 @@ class IDPFillArrayContext: IDPBaseContext {
     
     private var myGraphRequest: GraphRequest? = GraphRequest(graphPath: "/me/friends", parameters: ["fields" : ""], accessToken: AccessToken.current, httpMethod: .GET, apiVersion: .defaultVersion)
     
-    override func execute(object: Any, completionHandler: @escaping CompletionHandler) {
+    override func execute(object: Any) {
         if self.myGraphRequest != nil {
             self.myGraphRequest!.start { (response, result) in
                 switch result {
@@ -25,7 +25,7 @@ class IDPFillArrayContext: IDPBaseContext {
                 case .success(let GraphResponse):
                     if let responseDictionary = GraphResponse.dictionaryValue {
                         print(responseDictionary)
-                        self.processDataWithUsersModel(dictionary: responseDictionary as NSDictionary?, model: IDPArrayModel.sharedInstance, completionHandler)
+                        self.processDataWithUsersModel(dictionary: responseDictionary as NSDictionary?, model: IDPArrayModel.sharedInstance)
                     }
                 }
             }
@@ -36,7 +36,7 @@ class IDPFillArrayContext: IDPBaseContext {
         self.myGraphRequest = nil
     }
     
-    private func processDataWithUsersModel(dictionary: NSDictionary?, model: IDPArrayModel, _ completion: CompletionHandler) {
+    private func processDataWithUsersModel(dictionary: NSDictionary?, model: IDPArrayModel) {
         var userID = ""
         var userName = ""
         if let data = dictionary?["data"] as? Array<NSDictionary> {
@@ -53,7 +53,6 @@ class IDPFillArrayContext: IDPBaseContext {
         } else {
             print("Error during serialization")
         }
-        completion(true)
     }
     
 }

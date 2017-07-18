@@ -12,8 +12,9 @@ import FacebookLogin
 import FacebookCore
 
 class IDPLoginContext: IDPBaseContext {
-    override func execute(object: Any, completionHandler: @escaping CompletionHandler) {
+    override func execute(object: Any) {
         let loginManager = LoginManager()
+        self.state = IDPContextState.willLoad.rawValue
         
         loginManager.logIn([ .publicProfile, .email, .userFriends ], viewController: object as! IDPLoginViewController) { loginResult in
             switch loginResult {
@@ -21,14 +22,10 @@ class IDPLoginContext: IDPBaseContext {
                 print(error)
             case .cancelled:
                 print("User cancelled login.")
-            case .success( _, _, let accessToken):
-                AccessToken.current = accessToken
-                completionHandler(true)
-                //IDPFillUserContext().execute(object: self) {_ in
-                //}
-                IDPFillArrayContext().execute(object: self) {_ in
-                }
-
+            case .success( _, _, _):
+                //AccessToken.current = accessToken
+                self.state = IDPContextState.didLoad.rawValue
+                IDPFillArrayContext().execute(object: self)
             }
         }
     }

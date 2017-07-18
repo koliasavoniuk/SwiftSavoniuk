@@ -17,6 +17,8 @@
 		76382F891F1DF4DD00216BB0 /* IDPFillArrayContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76382F881F1DF4DD00216BB0 /* IDPFillArrayContext.swift */; };
 		76382F8D1F1E1F5500216BB0 /* IDPObservableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76382F8C1F1E1F5500216BB0 /* IDPObservableObject.swift */; };
 		76382F8F1F1E1F7500216BB0 /* IDPObservationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76382F8E1F1E1F7500216BB0 /* IDPObservationController.swift */; };
+		76382F911F1E20F300216BB0 /* IDPTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76382F901F1E20F300216BB0 /* IDPTableViewCell.swift */; };
+		76382F941F1E2F4C00216BB0 /* IDPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76382F921F1E2F4C00216BB0 /* IDPViewController.swift */; };
 		764A8E3F1F1C9A6E0052D034 /* IDPConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764A8E251F1C9A6E0052D034 /* IDPConstants.swift */; };
 		764A8E4B1F1C9A6E0052D034 /* IDPLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764A8E3C1F1C9A6E0052D034 /* IDPLoginViewController.swift */; };
 		764A8E4C1F1C9A6E0052D034 /* IDPLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 764A8E3D1F1C9A6E0052D034 /* IDPLoginViewController.xib */; };
@@ -53,6 +55,8 @@
 		76382F881F1DF4DD00216BB0 /* IDPFillArrayContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDPFillArrayContext.swift; sourceTree = "<group>"; };
 		76382F8C1F1E1F5500216BB0 /* IDPObservableObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDPObservableObject.swift; sourceTree = "<group>"; };
 		76382F8E1F1E1F7500216BB0 /* IDPObservationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDPObservationController.swift; sourceTree = "<group>"; };
+		76382F901F1E20F300216BB0 /* IDPTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDPTableViewCell.swift; sourceTree = "<group>"; };
+		76382F921F1E2F4C00216BB0 /* IDPViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDPViewController.swift; sourceTree = "<group>"; };
 		764A8E251F1C9A6E0052D034 /* IDPConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDPConstants.swift; sourceTree = "<group>"; };
 		764A8E3C1F1C9A6E0052D034 /* IDPLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDPLoginViewController.swift; sourceTree = "<group>"; };
 		764A8E3D1F1C9A6E0052D034 /* IDPLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IDPLoginViewController.xib; sourceTree = "<group>"; };
@@ -202,6 +206,7 @@
 				764A8E591F1CB3A80052D034 /* UsersViewController */,
 				764A8E341F1C9A6E0052D034 /* FriendsDetailViewController */,
 				764A8E3B1F1C9A6E0052D034 /* LoginViewController */,
+				76382F921F1E2F4C00216BB0 /* IDPViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -245,6 +250,7 @@
 				764A8E5E1F1CB3A80052D034 /* IDPUserCell.swift */,
 				764A8E5F1F1CB3A80052D034 /* IDPUserCell.xib */,
 				76382F841F1DEABF00216BB0 /* IDPUserView.swift */,
+				76382F901F1E20F300216BB0 /* IDPTableViewCell.swift */,
 			);
 			path = Private;
 			sourceTree = "<group>";
@@ -429,6 +435,7 @@
 				764A8E971F1CF7C90052D034 /* IDPArrayModel.swift in Sources */,
 				764A8E541F1C9BD40052D034 /* NSArray+IDPExtensions.swift in Sources */,
 				764A8E961F1CF7C90052D034 /* IDPUser.swift in Sources */,
+				76382F941F1E2F4C00216BB0 /* IDPViewController.swift in Sources */,
 				764A8E521F1C9B780052D034 /* Optional+IDPExtensions.swift in Sources */,
 				764A8E581F1CB33C0052D034 /* UIView+IDPExtensions.swift in Sources */,
 				760317F31F13A8F400E3D951 /* ViewController.swift in Sources */,
@@ -441,6 +448,7 @@
 				764A8E4E1F1C9B010052D034 /* UITableView+IDPExtensions.swift in Sources */,
 				76382F8D1F1E1F5500216BB0 /* IDPObservableObject.swift in Sources */,
 				764A8E6B1F1CB5E30052D034 /* IDPNavigationViewController.swift in Sources */,
+				76382F911F1E20F300216BB0 /* IDPTableViewCell.swift in Sources */,
 				760317F11F13A8F400E3D951 /* AppDelegate.swift in Sources */,
 				764A8E631F1CB3A80052D034 /* IDPUserCell.swift in Sources */,
 				764A8E951F1CF7C90052D034 /* IDPLoginContext.swift in Sources */,
