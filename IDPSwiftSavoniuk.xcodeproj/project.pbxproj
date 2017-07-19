@@ -38,6 +38,8 @@
 		764A8E951F1CF7C90052D034 /* IDPLoginContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764A8E8E1F1CF7C90052D034 /* IDPLoginContext.swift */; };
 		764A8E961F1CF7C90052D034 /* IDPUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764A8E8F1F1CF7C90052D034 /* IDPUser.swift */; };
 		764A8E971F1CF7C90052D034 /* IDPArrayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764A8E901F1CF7C90052D034 /* IDPArrayModel.swift */; };
+		768205951F1F62D600D7780E /* IDPFriendsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768205931F1F62D600D7780E /* IDPFriendsDetailViewController.swift */; };
+		768205961F1F62D600D7780E /* IDPFriendsDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 768205941F1F62D600D7780E /* IDPFriendsDetailViewController.xib */; };
 		81A5FFEFF5C96BA60D52BACB /* Pods_IDPSwiftSavoniuk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE405330725CD4DC367CCA40 /* Pods_IDPSwiftSavoniuk.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +78,8 @@
 		764A8E8E1F1CF7C90052D034 /* IDPLoginContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDPLoginContext.swift; sourceTree = "<group>"; };
 		764A8E8F1F1CF7C90052D034 /* IDPUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDPUser.swift; sourceTree = "<group>"; };
 		764A8E901F1CF7C90052D034 /* IDPArrayModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDPArrayModel.swift; sourceTree = "<group>"; };
+		768205931F1F62D600D7780E /* IDPFriendsDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDPFriendsDetailViewController.swift; sourceTree = "<group>"; };
+		768205941F1F62D600D7780E /* IDPFriendsDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IDPFriendsDetailViewController.xib; sourceTree = "<group>"; };
 		97F85CEBE27F71C143515761 /* Pods-IDPSwiftSavoniuk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IDPSwiftSavoniuk.release.xcconfig"; path = "Pods/Target Support Files/Pods-IDPSwiftSavoniuk/Pods-IDPSwiftSavoniuk.release.xcconfig"; sourceTree = "<group>"; };
 		CE405330725CD4DC367CCA40 /* Pods_IDPSwiftSavoniuk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IDPSwiftSavoniuk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -214,6 +218,8 @@
 		764A8E341F1C9A6E0052D034 /* FriendsDetailViewController */ = {
 			isa = PBXGroup;
 			children = (
+				768205931F1F62D600D7780E /* IDPFriendsDetailViewController.swift */,
+				768205941F1F62D600D7780E /* IDPFriendsDetailViewController.xib */,
 			);
 			path = FriendsDetailViewController;
 			sourceTree = "<group>";
@@ -369,6 +375,7 @@
 				764A8E641F1CB3A80052D034 /* IDPUserCell.xib in Resources */,
 				764A8E4C1F1C9A6E0052D034 /* IDPLoginViewController.xib in Resources */,
 				764A8E611F1CB3A80052D034 /* IDPUsersViewController.xib in Resources */,
+				768205961F1F62D600D7780E /* IDPFriendsDetailViewController.xib in Resources */,
 				761246381F13A74A00448E77 /* Default-568h@2x.png in Resources */,
 				764A8E6C1F1CB5E30052D034 /* IDPNavigationViewController.xib in Resources */,
 			);
@@ -449,6 +456,7 @@
 				76382F8D1F1E1F5500216BB0 /* IDPObservableObject.swift in Sources */,
 				764A8E6B1F1CB5E30052D034 /* IDPNavigationViewController.swift in Sources */,
 				76382F911F1E20F300216BB0 /* IDPTableViewCell.swift in Sources */,
+				768205951F1F62D600D7780E /* IDPFriendsDetailViewController.swift in Sources */,
 				760317F11F13A8F400E3D951 /* AppDelegate.swift in Sources */,
 				764A8E631F1CB3A80052D034 /* IDPUserCell.swift in Sources */,
 				764A8E951F1CF7C90052D034 /* IDPLoginContext.swift in Sources */,
