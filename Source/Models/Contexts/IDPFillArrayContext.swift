@@ -26,6 +26,13 @@ class IDPFillArrayContext: IDPBaseContext {
                     if let responseDictionary = GraphResponse.dictionaryValue {
                         print(responseDictionary)
                         self.processDataWithUsersModel(dictionary: responseDictionary as NSDictionary?, model: IDPArrayModel.sharedInstance)
+                        //fillTableView
+                        
+                        
+                        let usersViewController = IDPUsersViewController.usersViewController
+                        usersViewController.arrayModel = IDPArrayModel.sharedInstance
+                        //usersViewController.tableView?.reloadData()
+                        //usersViewController.navigationController?.pushViewController(usersViewController, animated: true)
                     }
                 }
             }
@@ -54,5 +61,4 @@ class IDPFillArrayContext: IDPBaseContext {
             print("Error during serialization")
         }
     }
-    
 }

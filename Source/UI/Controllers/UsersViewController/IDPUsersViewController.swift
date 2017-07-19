@@ -9,16 +9,23 @@
 import UIKit
 
 class IDPUsersViewController: IDPViewController, UITableViewDelegate, UITableViewDataSource {
+    @IBOutlet var tableView: UITableView?
+    @IBOutlet var mainView: UIView?
+    
+    static let usersViewController = IDPUsersViewController()
     
     var arrayModel = IDPArrayModel.sharedInstance
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.initMainView()
         
-        self.navigationController?.navigationBar.isHidden = true
+        IDPUsersViewController.usersViewController.navigationController?.navigationBar.isHidden = true
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    private func initMainView() -> () {
+        if self.mainView == nil {
+            self.mainView = self.view as UIView
+        }
     }
     
     // MARK: UITableViewDataSource

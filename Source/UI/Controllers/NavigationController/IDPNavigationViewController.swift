@@ -13,8 +13,6 @@ import FacebookCore
 
 class IDPNavigationViewController: UINavigationController {
     
-    static let sharedInstanceNavigation = IDPNavigationViewController()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.pushLoginViewController()
@@ -31,21 +29,4 @@ class IDPNavigationViewController: UINavigationController {
     func pushUsersViewController() {
         self.pushViewController(IDPUsersViewController.viewController(), animated: true)
     }
-
-    func authorizationDidFinish() {
-                    self.pushViewController(IDPUsersViewController.viewController(), animated: true)
-    }
-    /*
-    func authorizationDidFinish() {
-        NotificationCenter.default.addObserver(
-            forName: NSNotification.Name(rawValue:kIDPAuthorizationDidChange),
-            object: nil,
-            queue: nil) { (Notification) in
-                if AccessToken.current != nil {
-                    
-                    self.pushViewController(IDPUsersViewController.viewController(), animated: true)
-                }
-        }
-    }
-    */
 }
