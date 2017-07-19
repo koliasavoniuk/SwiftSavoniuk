@@ -30,9 +30,9 @@ class IDPLoginViewController: IDPViewController {
     override func prepare(observer: IDPObservationController?) {
         let handler = {(controller: IDPObservationController, userInfo: Any?) ->
             Void in
-            let usersViewController = IDPUsersViewController()
-            usersViewController.arrayModel = IDPArrayModel()
-            self.navigationController?.pushViewController(usersViewController, animated: true)
+            //let usersViewController = IDPUsersViewController()
+            //usersViewController.arrayModel = IDPArrayModel()
+            //self.navigationController?.pushViewController(usersViewController, animated: true)
         }
         
         observer?.set(handler: handler, for: IDPContextState.didLoad.rawValue)

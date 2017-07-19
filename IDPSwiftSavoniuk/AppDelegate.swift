@@ -25,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = window
         
         //window.rootViewController = IDPLoginViewController()
-        window.rootViewController = IDPNavigationViewController()
+        window.rootViewController = IDPNavigationViewController.sharedInstance
         
         window.backgroundColor = UIColor.white
         

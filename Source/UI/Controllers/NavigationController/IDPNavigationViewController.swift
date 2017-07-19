@@ -13,6 +13,8 @@ import FacebookCore
 
 class IDPNavigationViewController: UINavigationController {
     
+    static let sharedInstance = IDPNavigationViewController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.pushLoginViewController()
@@ -23,10 +25,10 @@ class IDPNavigationViewController: UINavigationController {
     }
     
     func pushLoginViewController() {
-        self.pushViewController(IDPLoginViewController.viewController(), animated: true)
+        IDPNavigationViewController.sharedInstance.pushViewController(IDPLoginViewController.viewController(), animated: true)
     }
     
     func pushUsersViewController() {
-        self.pushViewController(IDPUsersViewController.viewController(), animated: true)
+        IDPNavigationViewController.sharedInstance.pushViewController(IDPUsersViewController.viewController(), animated: true)
     }
 }

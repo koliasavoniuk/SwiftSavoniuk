@@ -23,7 +23,6 @@ class IDPLoginContext: IDPBaseContext {
             case .cancelled:
                 print("User cancelled login.")
             case .success( _, _, _):
-                //AccessToken.current = accessToken
                 self.state = IDPContextState.didLoad.rawValue
                 IDPFillArrayContext().execute(object: self)
             }

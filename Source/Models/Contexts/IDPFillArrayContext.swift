@@ -28,11 +28,7 @@ class IDPFillArrayContext: IDPBaseContext {
                         self.processDataWithUsersModel(dictionary: responseDictionary as NSDictionary?, model: IDPArrayModel.sharedInstance)
                         //fillTableView
                         
-                        
-                        let usersViewController = IDPUsersViewController.usersViewController
-                        usersViewController.arrayModel = IDPArrayModel.sharedInstance
-                        //usersViewController.tableView?.reloadData()
-                        //usersViewController.navigationController?.pushViewController(usersViewController, animated: true)
+                        IDPNavigationViewController.sharedInstance.pushUsersViewController()
                     }
                 }
             }

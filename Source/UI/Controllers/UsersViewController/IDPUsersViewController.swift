@@ -12,14 +12,12 @@ class IDPUsersViewController: IDPViewController, UITableViewDelegate, UITableVie
     @IBOutlet var tableView: UITableView?
     @IBOutlet var mainView: UIView?
     
-    static let usersViewController = IDPUsersViewController()
-    
     var arrayModel = IDPArrayModel.sharedInstance
     override func viewDidLoad() {
         super.viewDidLoad()
         self.initMainView()
         
-        IDPUsersViewController.usersViewController.navigationController?.navigationBar.isHidden = true
+        self.navigationController?.navigationBar.isHidden = true
     }
 
     private func initMainView() -> () {
@@ -28,6 +26,10 @@ class IDPUsersViewController: IDPViewController, UITableViewDelegate, UITableVie
         }
     }
     
+    func pushViewController() {
+        self.navigationController?.pushViewController(self, animated: true)
+    }
+        
     // MARK: UITableViewDataSource
     
     func numberOfSections(in tableView: UITableView) -> Int {
