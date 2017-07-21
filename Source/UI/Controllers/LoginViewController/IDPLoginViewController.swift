@@ -35,7 +35,6 @@ class IDPLoginViewController: IDPViewController {
     override func prepare(observer: IDPObservationController?) {
         let handler = {(controller: IDPObservationController, userInfo: Any?) ->
             Void in
-
         }
         
         observer?.set(handler: handler, for: IDPContextState.didLoad.rawValue)

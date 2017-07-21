@@ -10,7 +10,7 @@ import UIKit
 
 class IDPUserCell: IDPTableViewCell {
     
-    @IBOutlet var userImageView: UIView?
+    @IBOutlet var userImageView: UIImageView?
     @IBOutlet var fullNameLabel: UILabel?
     
     var user: IDPUser? {
@@ -19,10 +19,11 @@ class IDPUserCell: IDPTableViewCell {
     
     func initCell() {
         self.fullNameLabel = UILabel()
-        self.userImageView = UIView()
+        self.userImageView = UIImageView()
     }
 
     func fillWithUser(user: IDPUser) {
         self.fullNameLabel?.text = user.name
+        self.userImageView?.setImageFromURl(stringImageUrl: (user.pictureURL))
     }
 }

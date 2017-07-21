@@ -31,4 +31,8 @@ class IDPNavigationViewController: UINavigationController {
     func pushUsersViewController() {
         IDPNavigationViewController.sharedInstance.pushViewController(IDPUsersViewController.viewController(), animated: true)
     }
+    
+    func pushFriendsDetailVieWController() {
+        IDPNavigationViewController.sharedInstance.pushViewController(IDPFriendsDetailViewController.viewController(), animated: true)
+    }   
 }

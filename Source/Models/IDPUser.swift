@@ -14,10 +14,12 @@ class IDPUser: NSObject {
     var gender: String = ""
     var email: String = ""
     var friends: NSDictionary = [:]
+    var pictureURL: String = ""
     
-    init(id: String, name: String) {
+    init(id: String, name: String, pictureURL: String) {
         self.id = id
         self.name = name
+        self.pictureURL = pictureURL
     }
     
     func initWithDictionary (dictionary: NSDictionary) {
@@ -26,9 +28,6 @@ class IDPUser: NSObject {
         self.gender = dictionary.value(forKey: constGender) as! String
         self.email = dictionary.value(forKey: constEmail) as! String
         self.friends = dictionary.value(forKey: constFriends) as! NSDictionary
-    }
-    
-    func getFriends() -> NSDictionary {
-        return self.friends
+        self.pictureURL = dictionary.value(forKey: constPicture) as! String
     }
 }
