@@ -26,6 +26,7 @@ class IDPUsersViewController: IDPViewController, UITableViewDelegate, UITableVie
         }
     }
     
+    // MARK-
     // MARK: UITableViewDataSource
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -41,5 +42,18 @@ class IDPUsersViewController: IDPViewController, UITableViewDelegate, UITableVie
             result.user = (arrayModel[indexPath.row] as! IDPUser)
         }
         return reusableCell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.goToFriendPage(indexPath: indexPath)
+    }
+    
+    // MARK-
+    // MARK Private functions
+    
+    private func goToFriendPage(indexPath: IndexPath) {
+        let controller = IDPFriendsDetailViewController()
+        controller.fillWithUser(user: IDPArrayModel.sharedInstance[indexPath.row] as! IDPUser)
+        IDPNavigationViewController.sharedInstance.pushFriendsDetailVieWController(controller: controller)
     }
 }

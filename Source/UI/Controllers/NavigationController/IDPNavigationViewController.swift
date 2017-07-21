@@ -19,10 +19,6 @@ class IDPNavigationViewController: UINavigationController {
         super.viewDidLoad()
         self.pushLoginViewController()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
     
     func pushLoginViewController() {
         IDPNavigationViewController.sharedInstance.pushViewController(IDPLoginViewController.viewController(), animated: true)
@@ -32,7 +28,7 @@ class IDPNavigationViewController: UINavigationController {
         IDPNavigationViewController.sharedInstance.pushViewController(IDPUsersViewController.viewController(), animated: true)
     }
     
-    func pushFriendsDetailVieWController() {
-        IDPNavigationViewController.sharedInstance.pushViewController(IDPFriendsDetailViewController.viewController(), animated: true)
+    func pushFriendsDetailVieWController(controller: IDPFriendsDetailViewController) {
+        IDPNavigationViewController.sharedInstance.pushViewController(controller, animated: true)
     }   
 }

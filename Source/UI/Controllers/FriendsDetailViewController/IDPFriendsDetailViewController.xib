@@ -11,6 +11,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="IDPFriendsDetailViewController" customModule="IDPSwiftSavoniuk" customModuleProvider="target">
             <connections>
+                <outlet property="userEmail" destination="lxu-0D-Mbb" id="8S0-Dg-o1X"/>
+                <outlet property="userGender" destination="hIg-Sg-nrK" id="6cB-R4-Jd9"/>
+                <outlet property="userName" destination="xr5-C3-DU0" id="paV-dn-qJt"/>
+                <outlet property="userPicture" destination="F0x-Se-F9y" id="8gY-of-gfQ"/>
                 <outlet property="view" destination="iN0-l3-epB" id="aUg-R7-1Of"/>
             </connections>
         </placeholder>
