@@ -12,9 +12,11 @@ enum IDPContextState: Int {
     case didUnload, didLoad, didFailLoading, willLoad
 }
 
+typealias CompletionHandler = (_ success:Bool) -> Void
+
 class IDPBaseContext : IDPObservableObject {
 
-    func execute (object: Any) {
+    func execute (object: Any, completionHandler: @escaping CompletionHandler) {
     }
     
     func cancel () {

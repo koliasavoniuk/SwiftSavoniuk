@@ -15,7 +15,7 @@ class IDPFillArrayContext: IDPBaseContext {
     
     private var myGraphRequest: GraphRequest? = GraphRequest(graphPath: "/me/friends", parameters: ["fields" : ""], accessToken: AccessToken.current, httpMethod: .GET, apiVersion: .defaultVersion)
     
-    override func execute(object: Any) {
+    override func execute(object: Any, completionHandler: @escaping CompletionHandler) {
         if self.myGraphRequest != nil {
             self.myGraphRequest!.start { (response, result) in
                 switch result {
@@ -26,9 +26,7 @@ class IDPFillArrayContext: IDPBaseContext {
                     if let responseDictionary = GraphResponse.dictionaryValue {
                         print(responseDictionary)
                         self.processDataWithUsersModel(dictionary: responseDictionary as NSDictionary?, model: IDPArrayModel.sharedInstance)
-                        //fillTableView
-                        
-                        IDPNavigationViewController.sharedInstance.pushUsersViewController()
+                        completionHandler(true)
                     }
                 }
             }

@@ -15,6 +15,7 @@ class IDPLoginViewController: IDPViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loginContext = IDPLoginContext()
+        self.navigationController?.isNavigationBarHidden = true
         self.observer = loginContext?.observationController(observer: self)
     }
 
@@ -23,16 +24,18 @@ class IDPLoginViewController: IDPViewController {
     }
 
     @IBAction func onLogin(_ sender: UIButton) {
-        loginContext?.execute(object: self)
+        loginContext?.execute(object: self) {_ in
+            IDPFillArrayContext().execute(object: self) {_ in
+                IDPNavigationViewController.sharedInstance.pushUsersViewController()
+            }
+        }
     }
     
     //MARK: IDPViewController override
     override func prepare(observer: IDPObservationController?) {
         let handler = {(controller: IDPObservationController, userInfo: Any?) ->
             Void in
-            //let usersViewController = IDPUsersViewController()
-            //usersViewController.arrayModel = IDPArrayModel()
-            //self.navigationController?.pushViewController(usersViewController, animated: true)
+
         }
         
         observer?.set(handler: handler, for: IDPContextState.didLoad.rawValue)

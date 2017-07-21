@@ -26,10 +26,6 @@ class IDPUsersViewController: IDPViewController, UITableViewDelegate, UITableVie
         }
     }
     
-    func pushViewController() {
-        self.navigationController?.pushViewController(self, animated: true)
-    }
-        
     // MARK: UITableViewDataSource
     
     func numberOfSections(in tableView: UITableView) -> Int {

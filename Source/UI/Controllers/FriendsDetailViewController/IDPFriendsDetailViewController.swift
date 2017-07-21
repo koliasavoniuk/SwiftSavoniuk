@@ -9,7 +9,12 @@
 import UIKit
 
 class IDPFriendsDetailViewController: UIViewController {
-
+    
+    @IBOutlet var userImage: UIImageView?
+    @IBOutlet var userNameLabel: UILabel?
+    @IBOutlet var userGenderLabel: UILabel?
+    @IBOutlet var userEmailLabel: UILabel?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -17,6 +22,4 @@ class IDPFriendsDetailViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
-    
 }

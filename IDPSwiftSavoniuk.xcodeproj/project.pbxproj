@@ -34,7 +34,6 @@
 		764A8E6B1F1CB5E30052D034 /* IDPNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764A8E691F1CB5E30052D034 /* IDPNavigationViewController.swift */; };
 		764A8E6C1F1CB5E30052D034 /* IDPNavigationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 764A8E6A1F1CB5E30052D034 /* IDPNavigationViewController.xib */; };
 		764A8E911F1CF7C90052D034 /* IDPBaseContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764A8E891F1CF7C90052D034 /* IDPBaseContext.swift */; };
-		764A8E931F1CF7C90052D034 /* IDPFillUserContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764A8E8C1F1CF7C90052D034 /* IDPFillUserContext.swift */; };
 		764A8E951F1CF7C90052D034 /* IDPLoginContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764A8E8E1F1CF7C90052D034 /* IDPLoginContext.swift */; };
 		764A8E961F1CF7C90052D034 /* IDPUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764A8E8F1F1CF7C90052D034 /* IDPUser.swift */; };
 		764A8E971F1CF7C90052D034 /* IDPArrayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764A8E901F1CF7C90052D034 /* IDPArrayModel.swift */; };
@@ -74,7 +73,6 @@
 		764A8E691F1CB5E30052D034 /* IDPNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDPNavigationViewController.swift; sourceTree = "<group>"; };
 		764A8E6A1F1CB5E30052D034 /* IDPNavigationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IDPNavigationViewController.xib; sourceTree = "<group>"; };
 		764A8E891F1CF7C90052D034 /* IDPBaseContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDPBaseContext.swift; sourceTree = "<group>"; };
-		764A8E8C1F1CF7C90052D034 /* IDPFillUserContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDPFillUserContext.swift; sourceTree = "<group>"; };
 		764A8E8E1F1CF7C90052D034 /* IDPLoginContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDPLoginContext.swift; sourceTree = "<group>"; };
 		764A8E8F1F1CF7C90052D034 /* IDPUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDPUser.swift; sourceTree = "<group>"; };
 		764A8E901F1CF7C90052D034 /* IDPArrayModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDPArrayModel.swift; sourceTree = "<group>"; };
@@ -293,7 +291,6 @@
 		764A8E8A1F1CF7C90052D034 /* Contexts */ = {
 			isa = PBXGroup;
 			children = (
-				764A8E8C1F1CF7C90052D034 /* IDPFillUserContext.swift */,
 				764A8E8E1F1CF7C90052D034 /* IDPLoginContext.swift */,
 				76382F881F1DF4DD00216BB0 /* IDPFillArrayContext.swift */,
 			);
@@ -451,7 +448,6 @@
 				764A8E3F1F1C9A6E0052D034 /* IDPConstants.swift in Sources */,
 				76382F871F1DF22E00216BB0 /* IDPUsersModel.swift in Sources */,
 				764A8E4B1F1C9A6E0052D034 /* IDPLoginViewController.swift in Sources */,
-				764A8E931F1CF7C90052D034 /* IDPFillUserContext.swift in Sources */,
 				764A8E4E1F1C9B010052D034 /* UITableView+IDPExtensions.swift in Sources */,
 				76382F8D1F1E1F5500216BB0 /* IDPObservableObject.swift in Sources */,
 				764A8E6B1F1CB5E30052D034 /* IDPNavigationViewController.swift in Sources */,
