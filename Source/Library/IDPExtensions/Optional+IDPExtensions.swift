@@ -12,6 +12,17 @@ func cast<Value, Result>(_ value: Value) -> Result? {
     return value as? Result
 }
 
+//func unwrap<Result>(_ argument: Any?) -> Result {
+//    let result = argument ?? ""
+//    return result as! Result
+//}
+
+func unwrap<T>(Value: T?) -> Any {
+    var result: Any = 0
+    Value.flatMap {result = $0}
+    return result
+}
+
 extension Optional {
     
     func `do`(_ execute: (Wrapped) -> ()) {

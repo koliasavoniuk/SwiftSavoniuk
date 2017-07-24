@@ -40,6 +40,7 @@
 		767114941F221BEC0085B62B /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767114931F221BEC0085B62B /* UIImageView+Extensions.swift */; };
 		767114961F22202F0085B62B /* IDPFriendsDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 767114951F22202F0085B62B /* IDPFriendsDetailViewController.xib */; };
 		768205951F1F62D600D7780E /* IDPFriendsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768205931F1F62D600D7780E /* IDPFriendsDetailViewController.swift */; };
+		76BF82071F26069C00BDC187 /* Curry+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BF82061F26069C00BDC187 /* Curry+Extensions.swift */; };
 		81A5FFEFF5C96BA60D52BACB /* Pods_IDPSwiftSavoniuk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE405330725CD4DC367CCA40 /* Pods_IDPSwiftSavoniuk.framework */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +81,7 @@
 		767114931F221BEC0085B62B /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
 		767114951F22202F0085B62B /* IDPFriendsDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IDPFriendsDetailViewController.xib; sourceTree = "<group>"; };
 		768205931F1F62D600D7780E /* IDPFriendsDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDPFriendsDetailViewController.swift; sourceTree = "<group>"; };
+		76BF82061F26069C00BDC187 /* Curry+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Curry+Extensions.swift"; sourceTree = "<group>"; };
 		97F85CEBE27F71C143515761 /* Pods-IDPSwiftSavoniuk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IDPSwiftSavoniuk.release.xcconfig"; path = "Pods/Target Support Files/Pods-IDPSwiftSavoniuk/Pods-IDPSwiftSavoniuk.release.xcconfig"; sourceTree = "<group>"; };
 		CE405330725CD4DC367CCA40 /* Pods_IDPSwiftSavoniuk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IDPSwiftSavoniuk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -191,6 +193,7 @@
 				764A8E531F1C9BD40052D034 /* NSArray+IDPExtensions.swift */,
 				764A8E571F1CB33C0052D034 /* UIView+IDPExtensions.swift */,
 				767114931F221BEC0085B62B /* UIImageView+Extensions.swift */,
+				76BF82061F26069C00BDC187 /* Curry+Extensions.swift */,
 			);
 			path = IDPExtensions;
 			sourceTree = "<group>";
@@ -459,6 +462,7 @@
 				768205951F1F62D600D7780E /* IDPFriendsDetailViewController.swift in Sources */,
 				760317F11F13A8F400E3D951 /* AppDelegate.swift in Sources */,
 				764A8E631F1CB3A80052D034 /* IDPUserCell.swift in Sources */,
+				76BF82071F26069C00BDC187 /* Curry+Extensions.swift in Sources */,
 				764A8E951F1CF7C90052D034 /* IDPLoginContext.swift in Sources */,
 				76382F851F1DEABF00216BB0 /* IDPUserView.swift in Sources */,
 			);
