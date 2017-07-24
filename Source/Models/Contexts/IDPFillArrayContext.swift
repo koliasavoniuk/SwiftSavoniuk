@@ -13,7 +13,7 @@ import FacebookCore
 
 class IDPFillArrayContext: IDPBaseContext {
     
-    private var myGraphRequest: GraphRequest? = GraphRequest(graphPath: "/me/friends", parameters: ["fields" : "id, name, birthday, picture.type(large), email"], accessToken: AccessToken.current, httpMethod: .GET, apiVersion: .defaultVersion)
+    private var myGraphRequest: GraphRequest? = GraphRequest(graphPath: "/me/friends", parameters: ["fields" : "id, name, birthday, picture.type(large), email, gender"], accessToken: AccessToken.current, httpMethod: .GET, apiVersion: .defaultVersion)
     
     override func execute(object: Any, completionHandler: @escaping CompletionHandler) {
         if self.myGraphRequest != nil {
@@ -41,6 +41,8 @@ class IDPFillArrayContext: IDPBaseContext {
         var userID: String?
         var userName: String?
         var userPicture: String?
+        var userGender: String?
+        //var userEmail: String?
         if let data = dictionary?["data"] as? Array<NSDictionary> {
             for user in data {
                 if let id = user["id"] as? String {
@@ -49,12 +51,17 @@ class IDPFillArrayContext: IDPBaseContext {
                 if let name = user["name"] as? String {
                     userName = name
                 }
+                if let gender = user["gender"] as? String {
+                    userGender = gender
+                }
+                //if let email = user["email"] as? String {
+                //    userEmail = email
+                //}
                 if let data = user["picture"] as? [String : Any] {
                     let urlData = data["data"] as? [String: Any]
                     userPicture = urlData?["url"] as? String
-                    //userPicture = picture
                 }
-                let user = IDPUser(id: userID!, name:userName!, pictureURL:userPicture!)
+                let user = IDPUser(id: userID!, name:userName!, pictureURL:userPicture!, gender:userGender!)
                 model.addObject(object: user)
             }
         } else {
