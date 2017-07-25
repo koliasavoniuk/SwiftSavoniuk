@@ -36,6 +36,10 @@
 		764A8E951F1CF7C90052D034 /* LoginContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764A8E8E1F1CF7C90052D034 /* LoginContext.swift */; };
 		764A8E961F1CF7C90052D034 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764A8E8F1F1CF7C90052D034 /* User.swift */; };
 		764A8E971F1CF7C90052D034 /* ArrayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764A8E901F1CF7C90052D034 /* ArrayModel.swift */; };
+		765B21381F275F83000AE66E /* LoadingViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765B21371F275F83000AE66E /* LoadingViewContainer.swift */; };
+		765B213A1F275FA1000AE66E /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765B21391F275FA1000AE66E /* LoadingView.swift */; };
+		765B213C1F275FB3000AE66E /* SpinnerLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765B213B1F275FB3000AE66E /* SpinnerLoadingView.swift */; };
+		765B213E1F276048000AE66E /* SpinnerLoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 765B213D1F276048000AE66E /* SpinnerLoadingView.xib */; };
 		767114941F221BEC0085B62B /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767114931F221BEC0085B62B /* UIImageView+Extensions.swift */; };
 		767114961F22202F0085B62B /* FriendsDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 767114951F22202F0085B62B /* FriendsDetailViewController.xib */; };
 		768205951F1F62D600D7780E /* FriendsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768205931F1F62D600D7780E /* FriendsDetailViewController.swift */; };
@@ -76,6 +80,10 @@
 		764A8E8E1F1CF7C90052D034 /* LoginContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginContext.swift; sourceTree = "<group>"; };
 		764A8E8F1F1CF7C90052D034 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		764A8E901F1CF7C90052D034 /* ArrayModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayModel.swift; sourceTree = "<group>"; };
+		765B21371F275F83000AE66E /* LoadingViewContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewContainer.swift; sourceTree = "<group>"; };
+		765B21391F275FA1000AE66E /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		765B213B1F275FB3000AE66E /* SpinnerLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpinnerLoadingView.swift; sourceTree = "<group>"; };
+		765B213D1F276048000AE66E /* SpinnerLoadingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpinnerLoadingView.xib; sourceTree = "<group>"; };
 		767114931F221BEC0085B62B /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
 		767114951F22202F0085B62B /* FriendsDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FriendsDetailViewController.xib; sourceTree = "<group>"; };
 		768205931F1F62D600D7780E /* FriendsDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsDetailViewController.swift; sourceTree = "<group>"; };
@@ -199,7 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				764A8E331F1C9A6E0052D034 /* Controllers */,
-				764A8E3E1F1C9A6E0052D034 /* Views */,
+				765B21341F275F5B000AE66E /* Views */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -207,7 +215,6 @@
 		764A8E331F1C9A6E0052D034 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				767AF7DC1F273DDE00EC1A78 /* LoadingViewController */,
 				764A8E661F1CB3D80052D034 /* NavigationController */,
 				764A8E591F1CB3A80052D034 /* UsersViewController */,
 				764A8E341F1C9A6E0052D034 /* FriendsDetailViewController */,
@@ -233,13 +240,6 @@
 				764A8E3D1F1C9A6E0052D034 /* LoginViewController.xib */,
 			);
 			path = LoginViewController;
-			sourceTree = "<group>";
-		};
-		764A8E3E1F1C9A6E0052D034 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		764A8E591F1CB3A80052D034 /* UsersViewController */ = {
@@ -301,11 +301,31 @@
 			path = Contexts;
 			sourceTree = "<group>";
 		};
-		767AF7DC1F273DDE00EC1A78 /* LoadingViewController */ = {
+		765B21341F275F5B000AE66E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				765B21351F275F5B000AE66E /* LoadingViewContainer */,
 			);
-			path = LoadingViewController;
+			path = Views;
+			sourceTree = "<group>";
+		};
+		765B21351F275F5B000AE66E /* LoadingViewContainer */ = {
+			isa = PBXGroup;
+			children = (
+				765B21371F275F83000AE66E /* LoadingViewContainer.swift */,
+				765B21361F275F5B000AE66E /* Private */,
+			);
+			path = LoadingViewContainer;
+			sourceTree = "<group>";
+		};
+		765B21361F275F5B000AE66E /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				765B21391F275FA1000AE66E /* LoadingView.swift */,
+				765B213B1F275FB3000AE66E /* SpinnerLoadingView.swift */,
+				765B213D1F276048000AE66E /* SpinnerLoadingView.xib */,
+			);
+			path = Private;
 			sourceTree = "<group>";
 		};
 		ABD20B5E5142F33D49B4D03B /* Frameworks */ = {
@@ -381,6 +401,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				764A8E641F1CB3A80052D034 /* UserCell.xib in Resources */,
+				765B213E1F276048000AE66E /* SpinnerLoadingView.xib in Resources */,
 				764A8E4C1F1C9A6E0052D034 /* LoginViewController.xib in Resources */,
 				767114961F22202F0085B62B /* FriendsDetailViewController.xib in Resources */,
 				764A8E611F1CB3A80052D034 /* UsersViewController.xib in Resources */,
@@ -452,6 +473,7 @@
 				764A8E961F1CF7C90052D034 /* User.swift in Sources */,
 				76382F941F1E2F4C00216BB0 /* ViewController.swift in Sources */,
 				764A8E521F1C9B780052D034 /* Optional+Extensions.swift in Sources */,
+				765B213A1F275FA1000AE66E /* LoadingView.swift in Sources */,
 				764A8E581F1CB33C0052D034 /* UIView+Extensions.swift in Sources */,
 				767114941F221BEC0085B62B /* UIImageView+Extensions.swift in Sources */,
 				764A8E601F1CB3A80052D034 /* UsersViewController.swift in Sources */,
@@ -459,12 +481,14 @@
 				764A8E3F1F1C9A6E0052D034 /* Constants.swift in Sources */,
 				76382F871F1DF22E00216BB0 /* UsersModel.swift in Sources */,
 				764A8E4B1F1C9A6E0052D034 /* LoginViewController.swift in Sources */,
+				765B21381F275F83000AE66E /* LoadingViewContainer.swift in Sources */,
 				764A8E4E1F1C9B010052D034 /* UITableView+Extensions.swift in Sources */,
 				76382F8D1F1E1F5500216BB0 /* ObservableObject.swift in Sources */,
 				764A8E6B1F1CB5E30052D034 /* NavigationViewController.swift in Sources */,
 				76382F911F1E20F300216BB0 /* TableViewCell.swift in Sources */,
 				768205951F1F62D600D7780E /* FriendsDetailViewController.swift in Sources */,
 				760317F11F13A8F400E3D951 /* AppDelegate.swift in Sources */,
+				765B213C1F275FB3000AE66E /* SpinnerLoadingView.swift in Sources */,
 				764A8E631F1CB3A80052D034 /* UserCell.swift in Sources */,
 				76BF82071F26069C00BDC187 /* Curry+Extensions.swift in Sources */,
 				764A8E951F1CF7C90052D034 /* LoginContext.swift in Sources */,
