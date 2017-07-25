@@ -10,13 +10,14 @@ import UIKit
 
 class UsersViewController: ViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet var tableView: UITableView?
-    @IBOutlet var mainView: UIView?
+    @IBOutlet var mainView: LoadingViewContainer?
         
     var usersModel: UsersModel? {
         didSet {
             if usersModel != oldValue {
                 FillArrayContext().execute(object: self) {_ in
                     self.tableView?.reloadData()
+                    self.mainView?.isLoading = false
                 }
             }
         }
@@ -25,13 +26,14 @@ class UsersViewController: ViewController, UITableViewDelegate, UITableViewDataS
     override func viewDidLoad() {
         super.viewDidLoad()
         self.initMainView()
+        self.mainView?.isLoading = true
         
         self.navigationController?.navigationBar.isHidden = true
     }
 
     private func initMainView() -> () {
         if self.mainView == nil {
-            self.mainView = self.view as UIView
+            self.mainView = self.view as? LoadingViewContainer
         }
     }
         
