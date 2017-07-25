@@ -1,6 +1,6 @@
 //
-//  UIView+IDPExtensions.swift
-//  IDPSwiftSavoniuk
+//  UIView+Extensions.swift
+//  SwiftSavoniuk
 //
 //  Created by Student002 on 7/17/17.
 //  Copyright © 2017 Student002. All rights reserved.

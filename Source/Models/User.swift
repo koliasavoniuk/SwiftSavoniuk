@@ -1,6 +1,6 @@
 //
-//  IDPUser.swift
-//  IDPSwiftSavoniuk
+//  User.swift
+//  SwiftSavoniuk
 //
 //  Created by Student002 on 7/11/17.
 //  Copyright © 2017 Student002. All rights reserved.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-class IDPUser: NSObject {
+class User: NSObject {
     var id: String = ""
     var name: String = ""
     var gender: String = ""

@@ -1,6 +1,6 @@
 //
-//  IDPConstants.swift
-//  IDPSwiftSavoniuk
+//  Constants.swift
+//  SwiftSavoniuk
 //
 //  Created by Student002 on 7/13/17.
 //  Copyright © 2017 Student002. All rights reserved.

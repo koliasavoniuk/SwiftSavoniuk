@@ -1,6 +1,6 @@
 //
-//  IDPFillArrayContext.swift
-//  IDPSwiftSavoniuk
+//  FillArrayContext.swift
+//  SwiftSavoniuk
 //
 //  Created by Student002 on 7/18/17.
 //  Copyright © 2017 Student002. All rights reserved.
@@ -11,7 +11,7 @@ import Foundation
 import FacebookLogin
 import FacebookCore
 
-class IDPFillArrayContext: IDPBaseContext {
+class FillArrayContext: BaseContext {
     
     private var myGraphRequest: GraphRequest? = GraphRequest(graphPath: "/me/friends", parameters: ["fields" : "id, name, birthday, picture.type(large), email, gender"], accessToken: AccessToken.current, httpMethod: .GET, apiVersion: .defaultVersion)
     
@@ -25,7 +25,7 @@ class IDPFillArrayContext: IDPBaseContext {
                 case .success(let GraphResponse):
                     if let responseDictionary = GraphResponse.dictionaryValue {
                         print(responseDictionary)
-                        self.processDataWithUsersModel(dictionary: responseDictionary as NSDictionary?, model: (object as? IDPUsersViewController)!)
+                        self.processDataWithUsersModel(dictionary: responseDictionary as NSDictionary?, model: (object as? UsersViewController)!)
                         completionHandler(true)
                     }
                 }
@@ -37,7 +37,7 @@ class IDPFillArrayContext: IDPBaseContext {
         self.myGraphRequest = nil
     }
     
-    private func processDataWithUsersModel(dictionary: NSDictionary?, model: IDPUsersViewController) {
+    private func processDataWithUsersModel(dictionary: NSDictionary?, model: UsersViewController) {
         var userID: String?
         var userName: String?
         var userPicture: String?
@@ -61,7 +61,7 @@ class IDPFillArrayContext: IDPBaseContext {
                     let urlData = data["data"] as? [String: Any]
                     userPicture = urlData?["url"] as? String
                 }
-                let user = IDPUser(id: userID!, name:userName!, pictureURL:userPicture!, gender:userGender!)
+                let user = User(id: userID!, name:userName!, pictureURL:userPicture!, gender:userGender!)
                 model.usersModel?.addObject(object: user)
             }
         } else {

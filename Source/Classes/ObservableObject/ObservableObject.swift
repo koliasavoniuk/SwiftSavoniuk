@@ -1,6 +1,6 @@
 //
-//  IDPObservableObject.swift
-//  IDPSwiftSavoniuk
+//  ObservableObject.swift
+//  SwiftSavoniuk
 //
 //  Created by Student002 on 7/18/17.
 //  Copyright © 2017 Student002. All rights reserved.
@@ -8,10 +8,10 @@
 
 import UIKit
 
-typealias IDPControllerNotificationBlock = (IDPObservationController) -> Void
+typealias ControllerNotificationBlock = (ObservationController) -> Void
 
-class IDPObservableObject: NSObject {
-    var observationControllers: NSHashTable<IDPObservationController> = NSHashTable.weakObjects()
+class ObservableObject: NSObject {
+    var observationControllers: NSHashTable<ObservationController> = NSHashTable.weakObjects()
     
     // setters for state
     var state: Int = 0 {
@@ -30,31 +30,31 @@ class IDPObservableObject: NSObject {
     }
     
     // add-remove controller methods
-    func observationController(observer: Any?) -> IDPObservationController {
-        let controller = IDPObservationController(observer: observer as AnyObject, observableObject: self)
+    func observationController(observer: Any?) -> ObservationController {
+        let controller = ObservationController(observer: observer as AnyObject, observableObject: self)
         self.observationControllers.add(controller)
         
         return controller
     }
     
-    func invalidate(controller: IDPObservationController) {
+    func invalidate(controller: ObservationController) {
         self.observationControllers.remove(controller)
     }
     
     // notify methods
     func notify(state: Int, object: Any? = nil) {
-        self.notify(state: state, handler: { (controller: IDPObservationController) in
+        self.notify(state: state, handler: { (controller: ObservationController) in
             controller.notify(state: state, object: object)
         })
     }
     
-    func notify(state: Int, handler: IDPControllerNotificationBlock?) {
+    func notify(state: Int, handler: ControllerNotificationBlock?) {
         if handler == nil {
             return
         }
         
         for controller in observationControllers.objectEnumerator() {
-            handler?(controller as! IDPObservationController)
+            handler?(controller as! ObservationController)
         }
     }
 }

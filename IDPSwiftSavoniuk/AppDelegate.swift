@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  IDPSwiftSavoniuk
+//  SwiftSavoniuk
 //
 //  Created by Student002 on 7/7/17.
 //  Copyright © 2017 Student002. All rights reserved.
@@ -24,8 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         self.window = window
         
-        //window.rootViewController = IDPLoginViewController()
-        window.rootViewController = IDPNavigationViewController.viewController()
+        //window.rootViewController = LoginViewController()
+        window.rootViewController = NavigationViewController.viewController()
         
         window.backgroundColor = UIColor.white
         

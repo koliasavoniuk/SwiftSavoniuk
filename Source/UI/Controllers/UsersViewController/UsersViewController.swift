@@ -1,6 +1,6 @@
 //
-//  IDPUsersViewController.swift
-//  IDPSwiftSavoniuk
+//  UsersViewController.swift
+//  SwiftSavoniuk
 //
 //  Created by Student002 on 7/14/17.
 //  Copyright © 2017 Student002. All rights reserved.
@@ -8,14 +8,14 @@
 
 import UIKit
 
-class IDPUsersViewController: IDPViewController, UITableViewDelegate, UITableViewDataSource {
+class UsersViewController: ViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet var tableView: UITableView?
     @IBOutlet var mainView: UIView?
         
-    var usersModel: IDPUsersModel? {
+    var usersModel: UsersModel? {
         didSet {
             if usersModel != oldValue {
-                IDPFillArrayContext().execute(object: self) {_ in
+                FillArrayContext().execute(object: self) {_ in
                     self.tableView?.reloadData()
                 }
             }
@@ -47,8 +47,8 @@ class IDPUsersViewController: IDPViewController, UITableViewDelegate, UITableVie
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let reusableCell = tableView.reusableCellWithClass(IDPUserCell.self, for: indexPath) { (result) in
-            result.user = (usersModel?[indexPath.row] as! IDPUser)
+        let reusableCell = tableView.reusableCellWithClass(UserCell.self, for: indexPath) { (result) in
+            result.user = (usersModel?[indexPath.row] as! User)
         }
         return reusableCell
     }
@@ -61,8 +61,8 @@ class IDPUsersViewController: IDPViewController, UITableViewDelegate, UITableVie
     // MARK Private functions
     
     private func goToFriendPage(indexPath: IndexPath) {
-        let controller = IDPFriendsDetailViewController()
-        controller.fillWithUser(user: usersModel?[indexPath.row] as! IDPUser)
+        let controller = FriendsDetailViewController()
+        controller.fillWithUser(user: usersModel?[indexPath.row] as! User)
         self.navigationController?.pushViewController(controller, animated: true)
     }
 }

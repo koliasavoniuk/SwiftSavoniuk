@@ -1,6 +1,6 @@
 //
-//  IDPUserCell.swift
-//  IDPSwiftSavoniuk
+//  UserCell.swift
+//  SwiftSavoniuk
 //
 //  Created by Student002 on 7/14/17.
 //  Copyright © 2017 Student002. All rights reserved.
@@ -8,12 +8,12 @@
 
 import UIKit
 
-class IDPUserCell: IDPTableViewCell {
+class UserCell: TableViewCell {
     
     @IBOutlet var userImageView: UIImageView?
     @IBOutlet var fullNameLabel: UILabel?
     
-    var user: IDPUser? {
+    var user: User? {
         didSet {self.fillWithUser(user: user!)}
     }
     
@@ -22,7 +22,7 @@ class IDPUserCell: IDPTableViewCell {
         self.userImageView = UIImageView()
     }
 
-    func fillWithUser(user: IDPUser) {
+    func fillWithUser(user: User) {
         self.fullNameLabel?.text = user.name
         self.userImageView?.setImageFromURl(stringImageUrl: (user.pictureURL))
     }

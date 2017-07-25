@@ -1,6 +1,6 @@
 //
-//  IDPArrayModel.swift
-//  IDPSwiftSavoniuk
+//  ArrayModel.swift
+//  SwiftSavoniuk
 //
 //  Created by Student002 on 7/12/17.
 //  Copyright © 2017 Student002. All rights reserved.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-class IDPArrayModel<T: Equatable>: NSObject {
+class ArrayModel<T: Equatable>: NSObject {
     
     var friends: Array<T> = []
     
@@ -38,8 +38,8 @@ class IDPArrayModel<T: Equatable>: NSObject {
         }
     }
     
-    func objectAtIndex(index: Int) -> IDPUser {
-        return self.friends[index] as! IDPUser
+    func objectAtIndex(index: Int) -> User {
+        return self.friends[index] as! User
     }
     
     subscript(index: Int) -> NSObject {

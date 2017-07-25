@@ -1,6 +1,6 @@
 //
-//  IDPFriendsDetailViewController.swift
-//  IDPSwiftSavoniuk
+//  FriendsDetailViewController.swift
+//  SwiftSavoniuk
 //
 //  Created by Student002 on 7/19/17.
 //  Copyright © 2017 Student002. All rights reserved.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class IDPFriendsDetailViewController: UIViewController {
+class FriendsDetailViewController: UIViewController {
     
     @IBOutlet var userPicture: UIImageView?
     @IBOutlet var userName: UILabel?
@@ -31,7 +31,7 @@ class IDPFriendsDetailViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-    func fillWithUser(user: IDPUser) {
+    func fillWithUser(user: User) {
         self.pictureURL = user.pictureURL
         self.name  = user.name
         self.gender = user.gender

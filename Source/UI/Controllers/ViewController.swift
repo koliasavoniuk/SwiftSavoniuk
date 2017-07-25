@@ -1,6 +1,6 @@
 //
-//  IDPViewController.swift
-//  IDPSwiftSavoniuk
+//  ViewController.swift
+//  SwiftSavoniuk
 //
 //  Created by Student002 on 7/18/17.
 //  Copyright © 2017 Student002. All rights reserved.
@@ -8,9 +8,9 @@
 
 import UIKit
 
-class IDPViewController: UIViewController {
+class ViewController: UIViewController {
 
-    var observer: IDPObservationController? {
+    var observer: ObservationController? {
         didSet {
             if observer != oldValue {
                 self.prepare(observer: observer)
@@ -19,7 +19,7 @@ class IDPViewController: UIViewController {
     }
 
     // should be overriden in subclasses
-    func prepare(observer: IDPObservationController?) {
+    func prepare(observer: ObservationController?) {
     
     }
 }

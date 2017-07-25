@@ -1,6 +1,6 @@
 //
-//  IDPObservationController.swift
-//  IDPSwiftSavoniuk
+//  ObservationController.swift
+//  SwiftSavoniuk
 //
 //  Created by Student002 on 7/18/17.
 //  Copyright © 2017 Student002. All rights reserved.
@@ -8,9 +8,9 @@
 
 import UIKit
 
-typealias IDPStateChangeHandler = (IDPObservationController, Any?) -> Void
+typealias StateChangeHandler = (ObservationController, Any?) -> Void
 
-class IDPObservationController: Comparable {
+class ObservationController: Comparable {
     var observer: AnyObject?
     var observableObject: AnyObject?
     var states: Dictionary = [Int : Any]()
@@ -20,16 +20,16 @@ class IDPObservationController: Comparable {
         self.observableObject = observableObject
     }
     
-    func set(handler: @escaping IDPStateChangeHandler, for state: Int) {
+    func set(handler: @escaping StateChangeHandler, for state: Int) {
         self.states[state] = handler
     }
     
-    func remove(handler: @escaping IDPStateChangeHandler, for state: Int) {
+    func remove(handler: @escaping StateChangeHandler, for state: Int) {
         self.states[state] = nil
     }
     
-    func handler(for state: Int) -> IDPStateChangeHandler? {
-        return self.states[state] as? IDPStateChangeHandler
+    func handler(for state: Int) -> StateChangeHandler? {
+        return self.states[state] as? StateChangeHandler
     }
     
     subscript(index: Int) -> Any? {
@@ -37,23 +37,23 @@ class IDPObservationController: Comparable {
             return self.handler(for: index)
         }
         set {
-            self.set(handler: newValue as! IDPStateChangeHandler, for: index)
+            self.set(handler: newValue as! StateChangeHandler, for: index)
         }
     }
     
     func notify(state: Int, object: Any? = nil) {
-        if let handler = self[state] as? IDPStateChangeHandler {
+        if let handler = self[state] as? StateChangeHandler {
             handler(self, object)
         }
     }
     
     // MARK: Comparable protocol
     
-    static func < (lhs: IDPObservationController, rhs: IDPObservationController) -> Bool {
+    static func < (lhs: ObservationController, rhs: ObservationController) -> Bool {
         return false
     }
     
-    static func == (lhs: IDPObservationController, rhs: IDPObservationController) -> Bool {
+    static func == (lhs: ObservationController, rhs: ObservationController) -> Bool {
         return lhs === rhs
     }
 }

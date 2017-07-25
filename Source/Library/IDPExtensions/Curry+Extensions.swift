@@ -1,6 +1,6 @@
 //
 //  Curry+Extensions.swift
-//  IDPSwiftSavoniuk
+//  SwiftSavoniuk
 //
 //  Created by Student002 on 7/24/17.
 //  Copyright © 2017 Student002. All rights reserved.
