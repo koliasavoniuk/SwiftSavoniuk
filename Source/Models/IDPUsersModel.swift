@@ -8,6 +8,6 @@
 
 import Foundation
 
-class IDPUsersModel: IDPArrayModel {
+class IDPUsersModel: IDPArrayModel<IDPUser> {
     
 }

@@ -11,8 +11,17 @@ import UIKit
 class IDPUsersViewController: IDPViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet var tableView: UITableView?
     @IBOutlet var mainView: UIView?
+        
+    var usersModel: IDPUsersModel? {
+        didSet {
+            if usersModel != oldValue {
+                IDPFillArrayContext().execute(object: self) {_ in
+                    self.tableView?.reloadData()
+                }
+            }
+        }
+    }
     
-    var arrayModel = IDPArrayModel.sharedInstance
     override func viewDidLoad() {
         super.viewDidLoad()
         self.initMainView()
@@ -34,12 +43,12 @@ class IDPUsersViewController: IDPViewController, UITableViewDelegate, UITableVie
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return arrayModel.count
+        return (usersModel?.count)!
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let reusableCell = tableView.reusableCellWithClass(IDPUserCell.self, for: indexPath) { (result) in
-            result.user = (arrayModel[indexPath.row] as! IDPUser)
+            result.user = (usersModel?[indexPath.row] as! IDPUser)
         }
         return reusableCell
     }
@@ -53,7 +62,7 @@ class IDPUsersViewController: IDPViewController, UITableViewDelegate, UITableVie
     
     private func goToFriendPage(indexPath: IndexPath) {
         let controller = IDPFriendsDetailViewController()
-        controller.fillWithUser(user: IDPArrayModel.sharedInstance[indexPath.row] as! IDPUser)
-        IDPNavigationViewController.sharedInstance.pushFriendsDetailVieWController(controller: controller)
+        controller.fillWithUser(user: usersModel?[indexPath.row] as! IDPUser)
+        self.navigationController?.pushViewController(controller, animated: true)
     }
 }

@@ -16,7 +16,8 @@ typealias CompletionHandler = (_ success:Bool) -> Void
 
 class IDPBaseContext : IDPObservableObject {
 
-    func execute (object: Any, completionHandler: @escaping CompletionHandler) {
+    func execute (object: AnyObject, completionHandler: @escaping CompletionHandler) {
+        
     }
     
     func cancel () {

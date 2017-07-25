@@ -12,7 +12,7 @@ import FacebookLogin
 import FacebookCore
 
 class IDPLoginContext: IDPBaseContext {
-    override func execute(object: Any, completionHandler: @escaping CompletionHandler) {
+    override func execute(object: AnyObject, completionHandler: @escaping CompletionHandler) {
         let loginManager = LoginManager()
         self.state = IDPContextState.willLoad.rawValue
         

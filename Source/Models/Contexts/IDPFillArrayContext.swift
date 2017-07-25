@@ -15,7 +15,7 @@ class IDPFillArrayContext: IDPBaseContext {
     
     private var myGraphRequest: GraphRequest? = GraphRequest(graphPath: "/me/friends", parameters: ["fields" : "id, name, birthday, picture.type(large), email, gender"], accessToken: AccessToken.current, httpMethod: .GET, apiVersion: .defaultVersion)
     
-    override func execute(object: Any, completionHandler: @escaping CompletionHandler) {
+    override func execute(object: AnyObject , completionHandler: @escaping CompletionHandler) {
         if self.myGraphRequest != nil {
             self.myGraphRequest!.start { (response, result) in
                 switch result {
@@ -25,7 +25,7 @@ class IDPFillArrayContext: IDPBaseContext {
                 case .success(let GraphResponse):
                     if let responseDictionary = GraphResponse.dictionaryValue {
                         print(responseDictionary)
-                        self.processDataWithUsersModel(dictionary: responseDictionary as NSDictionary?, model: IDPArrayModel.sharedInstance)
+                        self.processDataWithUsersModel(dictionary: responseDictionary as NSDictionary?, model: (object as? IDPUsersViewController)!)
                         completionHandler(true)
                     }
                 }
@@ -37,7 +37,7 @@ class IDPFillArrayContext: IDPBaseContext {
         self.myGraphRequest = nil
     }
     
-    private func processDataWithUsersModel(dictionary: NSDictionary?, model: IDPArrayModel) {
+    private func processDataWithUsersModel(dictionary: NSDictionary?, model: IDPUsersViewController) {
         var userID: String?
         var userName: String?
         var userPicture: String?
@@ -62,7 +62,7 @@ class IDPFillArrayContext: IDPBaseContext {
                     userPicture = urlData?["url"] as? String
                 }
                 let user = IDPUser(id: userID!, name:userName!, pictureURL:userPicture!, gender:userGender!)
-                model.addObject(object: user)
+                model.usersModel?.addObject(object: user)
             }
         } else {
             print("Error during serialization")

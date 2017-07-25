@@ -8,11 +8,9 @@
 
 import Foundation
 
-class IDPArrayModel: NSObject {
+class IDPArrayModel<T: Equatable>: NSObject {
     
-    var friends: NSMutableArray = []
-    
-    static let sharedInstance = IDPArrayModel()
+    var friends: Array<T> = []
     
     var count: Int {
         get {
@@ -20,21 +18,21 @@ class IDPArrayModel: NSObject {
         }
     }
         
-    func addObject(object: Any) {
-        self.friends.add(object)
+    func addObject(object: T) {
+        self.friends.append(object)
     }
     
-    func removeObject(object: Any) {
-        self.friends.remove(object)
+    func removeObject(object: T) {
+        self.friends = self.friends.filter { $0 != object }
     }
     
-    func addObjects(objects: NSArray) {
+    func addObjects(objects: [T]) {
         for object in objects {
             addObject(object: object)
         }
     }
     
-    func removeObjects(objects: NSArray) {
+    func removeObjects(objects: [T]) {
         for object in objects {
             removeObject(object: object)
         }
@@ -47,9 +45,4 @@ class IDPArrayModel: NSObject {
     subscript(index: Int) -> NSObject {
         get { return self.friends[index] as! NSObject }
     }
-    
-    func setObjectAtIndex(object: IDPUser, index: Int) {
-        self.friends.insert(object, at: index)
-    }
-    
 }

@@ -25,9 +25,9 @@ class IDPLoginViewController: IDPViewController {
 
     @IBAction func onLogin(_ sender: UIButton) {
         loginContext?.execute(object: self) {_ in
-            IDPFillArrayContext().execute(object: self) {_ in
-                IDPNavigationViewController.sharedInstance.pushUsersViewController()
-            }
+            let controller = IDPUsersViewController.viewController()
+            controller.usersModel = IDPUsersModel()
+            self.navigationController?.pushViewController(controller, animated: true)
         }
     }
     
