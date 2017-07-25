@@ -210,6 +210,7 @@
 		764A8E331F1C9A6E0052D034 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				767AF7DC1F273DDE00EC1A78 /* LoadingViewController */,
 				764A8E661F1CB3D80052D034 /* NavigationController */,
 				764A8E591F1CB3A80052D034 /* UsersViewController */,
 				764A8E341F1C9A6E0052D034 /* FriendsDetailViewController */,
@@ -301,6 +302,13 @@
 				76382F881F1DF4DD00216BB0 /* IDPFillArrayContext.swift */,
 			);
 			path = Contexts;
+			sourceTree = "<group>";
+		};
+		767AF7DC1F273DDE00EC1A78 /* LoadingViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LoadingViewController;
 			sourceTree = "<group>";
 		};
 		ABD20B5E5142F33D49B4D03B /* Frameworks */ = {
