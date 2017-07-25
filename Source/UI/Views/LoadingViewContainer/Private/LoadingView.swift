@@ -38,7 +38,7 @@ extension AlphaLoadingView
 {
     var isLoading: Bool {
         get { return self.alpha > 0}
-        set { self.set(loading: newValue, animated: false) }
+        set { self.set(loading: newValue, animated: true) }
     }
     
     func set(loading: Bool, animated: Bool, completionHandler: AnimationCompletionHandler) {

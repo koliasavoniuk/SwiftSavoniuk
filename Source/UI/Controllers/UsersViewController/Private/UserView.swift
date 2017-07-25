@@ -8,8 +8,8 @@
 
 import UIKit
 
-class UserView: UIView {
+class UserView: LoadingViewContainer {
     
-    @IBOutlet var userFriendsTableView: UITableView?
+    //@IBOutlet var userFriendsTableView: UITableView?
     
 }

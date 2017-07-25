@@ -10,7 +10,7 @@ import UIKit
 
 class UsersViewController: ViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet var tableView: UITableView?
-    @IBOutlet var mainView: LoadingViewContainer?
+    @IBOutlet var mainView: UserView?
         
     var usersModel: UsersModel? {
         didSet {
@@ -33,7 +33,7 @@ class UsersViewController: ViewController, UITableViewDelegate, UITableViewDataS
 
     private func initMainView() -> () {
         if self.mainView == nil {
-            self.mainView = self.view as? LoadingViewContainer
+            self.mainView = self.view as? UserView
         }
     }
         
