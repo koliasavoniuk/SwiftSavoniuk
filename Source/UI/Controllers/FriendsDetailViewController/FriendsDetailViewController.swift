@@ -45,4 +45,8 @@ class FriendsDetailViewController: UIViewController {
         self.userEmail?.text = self.email
     }
     
+    @IBAction func backButton() {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
 }
