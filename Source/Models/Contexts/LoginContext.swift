@@ -16,7 +16,7 @@ class LoginContext: BaseContext {
         let loginManager = LoginManager()
         self.state = ContextState.willLoad.rawValue
         
-        loginManager.logIn([ .publicProfile, .email, .userFriends ], viewController: object as! LoginViewController) { loginResult in
+        loginManager.logIn([ .publicProfile, .email, .userFriends ], viewController: object as? LoginViewController) { loginResult in
             switch loginResult {
             case .failed(let error):
                 print(error)

@@ -24,4 +24,18 @@ extension Optional {
     func `do`(_ execute: (Wrapped) -> ()) {
         self.map(execute)
     }
+    
+    func apply<Result>(_ function: ((Wrapped) -> Result)?) -> Result? {
+        return function.flatMap{function in
+            self.flatMap(function)
+        }
+    }
+    
+    func apply<Value, Result>(_ value: Value?) -> Result?
+        where Wrapped == (Value) -> Result
+    {
+        return self.flatMap { function in
+            value.flatMap(function)
+        }
+    }
 }

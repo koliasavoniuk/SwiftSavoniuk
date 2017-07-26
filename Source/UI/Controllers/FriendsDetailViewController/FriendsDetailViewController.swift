@@ -24,6 +24,7 @@ class FriendsDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = false
+
         self.fillFields()
         
     }
@@ -45,4 +46,12 @@ class FriendsDetailViewController: UIViewController {
         self.userGender?.text = self.gender
         self.userEmail?.text = self.email
     }
+    
+    /*private func configureImageView(with user:  User?) {
+        if let picture = user?.picture {
+            let imageModel:  ImageModel =  ImageModel.model(with: URL(string: picture)!)!
+            self.userPicture?.imageModel = imageModel
+        }
+        self.isLoading = false
+    }*/
 }

@@ -2,56 +2,56 @@
 
 import UIKit
 
-var str = "Hello, playground"
+extension Optional {
 
-
-
-
-
-
-//func curry<A, B, C>(_ function: @escaping (A, B) -> C) -> (A) -> (B) -> C {
-//    return { (a: A) ->
-//    }
-//}
-//
-//func curry<A, B, C, D>(_ function: @escaping (A, B, C) -> D) -> (A) -> (B) -> (C) -> D {
-//    return { arg in
-//        { return function(arg, $0) }
-//    }
-//}
-
-public func curry<A, B, C>(_ f : @escaping (A, B) -> C) -> (A) -> (B) -> C {
-    
-    return { (a : A) -> (B) -> C in
-        { (b : B) -> C in
-            
-            f(a, b)
+func apply<Value, Result>(_ value: Value?) -> Result?
+        where Wrapped == (Value) -> Result
+    {
+        return self.flatMap { function in
+            value.flatMap(function)
         }
     }
-    
 }
 
-
-
-
 public func curry<A, B, C, D>(_ f : @escaping (A, B, C) -> D) -> (A) -> (B) -> (C) -> D {
-    
     return { (a : A) -> (B) -> (C) -> D in
         { (b : B) -> (C) -> D in
-            { (c : C) -> D in
-                
+            { (c : C)  -> D in
                 f(a, b, c)
             }
         }
     }
-    
+}
+
+func cast<Value, Result>(_ value: Value) -> Result? {
+    return value as? Result
+}
+
+func threePar(int: Int, string: String, object: String) {
+    print(" threePar - \(threePar)" )
+    print("par1 = \(int)")
+    print("par2 = \(string)")
+    print("par3 = \(object)")
 }
 
 
-let addFunc:(Int,Int,Int) -> Int = {$0 + $1 + $2}
+let dic1:[String : Any]? = ["id" : 15,"name" : "name1","foto" : ["data" : ["Url" : "https://foto1.jpg"]]]
+let dic2:[String : Any]? = ["id" : 17,"name" : "name2","foto" : ["data" : ["Url" : "https://foto2.jpg"]]]
+let dic3:[String : Any]? = ["id" : 18,"name" : "name3","foto" : ["data" : ["Url" : "https://foto3.jpg"]]]
 
-addFunc(3, 1, 6)
+var arrayData = Optional([dic1,dic2,dic3])
 
-let curryAdd = curry(addFunc)
+let creator = curry(threePar)
 
-curryAdd(3)(1)(6)
+let array1 = arrayData.flatMap {
+    $0.flatMap { fbUser in
+        var  id = ( fbUser?["id"] as? Int )
+        var id2:Int? = cast(fbUser?["id"])
+        //print(id2)
+        // print(id)
+        let dicFoto:[String : [String : Any]]? = cast(fbUser?["foto"])
+        id.flatMap(creator)
+            .apply( fbUser?["name"] as? String )
+            .apply( (cast(dicFoto?["data"]?["Url"]) ?? "") )
+    }
+}

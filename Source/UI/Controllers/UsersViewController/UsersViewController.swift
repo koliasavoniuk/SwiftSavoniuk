@@ -27,7 +27,7 @@ class UsersViewController: ViewController, UITableViewDelegate, UITableViewDataS
         super.viewDidLoad()
         self.initMainView()
         self.mainView?.isLoading = true
-
+        
         self.navigationController?.isNavigationBarHidden = true
     }
 
@@ -50,7 +50,7 @@ class UsersViewController: ViewController, UITableViewDelegate, UITableViewDataS
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let reusableCell = tableView.reusableCellWithClass(UserCell.self, for: indexPath) { (result) in
-            result.user = (usersModel?[indexPath.row] as! User)
+            result.user = usersModel![indexPath.row]
         }
         return reusableCell
     }
@@ -64,7 +64,7 @@ class UsersViewController: ViewController, UITableViewDelegate, UITableViewDataS
     
     private func goToFriendPage(indexPath: IndexPath) {
         let controller = FriendsDetailViewController()
-        controller.fillWithUser(user: usersModel?[indexPath.row] as! User)
+        controller.fillWithUser(user: usersModel![indexPath.row])
         self.navigationController?.pushViewController(controller, animated: true)
     }
 }

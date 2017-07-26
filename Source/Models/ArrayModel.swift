@@ -8,7 +8,7 @@
 
 import Foundation
 
-class ArrayModel<T: Equatable>: NSObject {
+class ArrayModel<T: Equatable>: Model {
     
     var friends: Array<T> = []
     
@@ -38,11 +38,11 @@ class ArrayModel<T: Equatable>: NSObject {
         }
     }
     
-    func objectAtIndex(index: Int) -> User {
-        return self.friends[index] as! User
+    func objectAtIndex(index: Int) -> T {
+        return self.friends[index]
     }
     
-    subscript(index: Int) -> NSObject {
-        get { return self.friends[index] as! NSObject }
+    subscript(index: Int) -> T {
+        get { return self.friends[index] }
     }
 }
