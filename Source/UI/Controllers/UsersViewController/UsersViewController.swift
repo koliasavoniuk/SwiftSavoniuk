@@ -27,8 +27,8 @@ class UsersViewController: ViewController, UITableViewDelegate, UITableViewDataS
         super.viewDidLoad()
         self.initMainView()
         self.mainView?.isLoading = true
-        
-        self.navigationController?.navigationBar.isHidden = true
+
+        self.navigationController?.isNavigationBarHidden = true
     }
 
     private func initMainView() -> () {

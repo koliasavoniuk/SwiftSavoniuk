@@ -23,6 +23,7 @@ class FriendsDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.isNavigationBarHidden = false
         self.fillFields()
         
     }
@@ -44,9 +45,4 @@ class FriendsDetailViewController: UIViewController {
         self.userGender?.text = self.gender
         self.userEmail?.text = self.email
     }
-    
-    @IBAction func backButton() {
-        self.navigationController?.popViewController(animated: true)
-    }
-    
 }
