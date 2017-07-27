@@ -21,14 +21,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
                 
         let window = UIWindow.init(frame: UIScreen.main.bounds)
-        
         self.window = window
         
-        //window.rootViewController = LoginViewController()
-        window.rootViewController = NavigationViewController.viewController()
+        let controller =  UINavigationController.viewController()
+        window.rootViewController = controller
+        let loginViewController =  LoginViewController.viewController()
+        controller.setViewControllers([loginViewController], animated: true)
         
         window.backgroundColor = UIColor.white
-        
         window.makeKeyAndVisible()
 
         return true

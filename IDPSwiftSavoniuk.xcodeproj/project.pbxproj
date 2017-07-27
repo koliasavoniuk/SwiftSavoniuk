@@ -30,8 +30,6 @@
 		764A8E611F1CB3A80052D034 /* UsersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 764A8E5B1F1CB3A80052D034 /* UsersViewController.xib */; };
 		764A8E631F1CB3A80052D034 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764A8E5E1F1CB3A80052D034 /* UserCell.swift */; };
 		764A8E641F1CB3A80052D034 /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 764A8E5F1F1CB3A80052D034 /* UserCell.xib */; };
-		764A8E6B1F1CB5E30052D034 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764A8E691F1CB5E30052D034 /* NavigationViewController.swift */; };
-		764A8E6C1F1CB5E30052D034 /* NavigationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 764A8E6A1F1CB5E30052D034 /* NavigationViewController.xib */; };
 		764A8E911F1CF7C90052D034 /* BaseContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764A8E891F1CF7C90052D034 /* BaseContext.swift */; };
 		764A8E951F1CF7C90052D034 /* LoginContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764A8E8E1F1CF7C90052D034 /* LoginContext.swift */; };
 		764A8E961F1CF7C90052D034 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764A8E8F1F1CF7C90052D034 /* User.swift */; };
@@ -81,8 +79,6 @@
 		764A8E5B1F1CB3A80052D034 /* UsersViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UsersViewController.xib; sourceTree = "<group>"; };
 		764A8E5E1F1CB3A80052D034 /* UserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		764A8E5F1F1CB3A80052D034 /* UserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
-		764A8E691F1CB5E30052D034 /* NavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
-		764A8E6A1F1CB5E30052D034 /* NavigationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NavigationViewController.xib; sourceTree = "<group>"; };
 		764A8E891F1CF7C90052D034 /* BaseContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseContext.swift; sourceTree = "<group>"; };
 		764A8E8E1F1CF7C90052D034 /* LoginContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginContext.swift; sourceTree = "<group>"; };
 		764A8E8F1F1CF7C90052D034 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -232,7 +228,6 @@
 		764A8E331F1C9A6E0052D034 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				764A8E661F1CB3D80052D034 /* NavigationController */,
 				764A8E591F1CB3A80052D034 /* UsersViewController */,
 				764A8E341F1C9A6E0052D034 /* FriendsDetailViewController */,
 				764A8E3B1F1C9A6E0052D034 /* LoginViewController */,
@@ -278,15 +273,6 @@
 				76382F901F1E20F300216BB0 /* TableViewCell.swift */,
 			);
 			path = Private;
-			sourceTree = "<group>";
-		};
-		764A8E661F1CB3D80052D034 /* NavigationController */ = {
-			isa = PBXGroup;
-			children = (
-				764A8E691F1CB5E30052D034 /* NavigationViewController.swift */,
-				764A8E6A1F1CB5E30052D034 /* NavigationViewController.xib */,
-			);
-			path = NavigationController;
 			sourceTree = "<group>";
 		};
 		764A8E871F1CF7C90052D034 /* Models */ = {
@@ -443,7 +429,6 @@
 				767114961F22202F0085B62B /* FriendsDetailViewController.xib in Resources */,
 				764A8E611F1CB3A80052D034 /* UsersViewController.xib in Resources */,
 				761246381F13A74A00448E77 /* Default-568h@2x.png in Resources */,
-				764A8E6C1F1CB5E30052D034 /* NavigationViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -527,7 +512,6 @@
 				764E25FF1F28D4CE00D09506 /* URL+Extensions.swift in Sources */,
 				764E25F71F28CF2B00D09506 /* InternetImageModel.swift in Sources */,
 				764E25F31F28CEFD00D09506 /* ImageModel.swift in Sources */,
-				764A8E6B1F1CB5E30052D034 /* NavigationViewController.swift in Sources */,
 				764E25F91F28D02800D09506 /* Model.swift in Sources */,
 				76382F911F1E20F300216BB0 /* TableViewCell.swift in Sources */,
 				768205951F1F62D600D7780E /* FriendsDetailViewController.swift in Sources */,
