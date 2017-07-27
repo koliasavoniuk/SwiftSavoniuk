@@ -10,22 +10,16 @@ import UIKit
 
 class FriendsDetailViewController: UIViewController {
     
-    @IBOutlet var userPicture: UIImageView?
-    @IBOutlet var userName: UILabel?
-    @IBOutlet var userGender: UILabel?
-    @IBOutlet var userEmail: UILabel?
+    @IBOutlet var friendDetailView: FriendDetailView?
     
-    private var name = ""
-    private var gender = ""
-    private var email = ""
-    private var pictureURL = ""
-    
+    var user: User?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.navigationController?.isNavigationBarHidden = false
-
-        self.fillFields()
+        self.initMainView()
+        self.friendDetailView?.currentUser = user
         
     }
     
@@ -33,25 +27,11 @@ class FriendsDetailViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-    func fillWithUser(user: User) {
-        self.pictureURL = user.pictureURL
-        self.name  = user.name
-        self.gender = user.gender
-        self.email = user.email
-    }
+    // MARK : Private functions
     
-    func fillFields() {
-        self.userPicture?.setImageFromURl(stringImageUrl: (self.pictureURL))
-        self.userName?.text = self.name
-        self.userGender?.text = self.gender
-        self.userEmail?.text = self.email
-    }
-    
-    /*private func configureImageView(with user:  User?) {
-        if let picture = user?.picture {
-            let imageModel:  ImageModel =  ImageModel.model(with: URL(string: picture)!)!
-            self.userPicture?.imageModel = imageModel
+    private func initMainView() {
+        if nil == self.friendDetailView {
+            self.friendDetailView = self.view as? FriendDetailView
         }
-        self.isLoading = false
-    }*/
+    }
 }

@@ -63,8 +63,10 @@ class UsersViewController: ViewController, UITableViewDelegate, UITableViewDataS
     // MARK Private functions
     
     private func goToFriendPage(indexPath: IndexPath) {
-        let controller = FriendsDetailViewController()
-        controller.fillWithUser(user: usersModel![indexPath.row])
+        let controller = FriendsDetailViewController.viewController()
+        let user = usersModel![indexPath.row]
+        controller.user = user
+        
         self.navigationController?.pushViewController(controller, animated: true)
     }
 }

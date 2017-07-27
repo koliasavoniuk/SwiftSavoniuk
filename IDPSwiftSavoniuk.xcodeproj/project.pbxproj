@@ -46,6 +46,8 @@
 		765B213C1F275FB3000AE66E /* SpinnerLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765B213B1F275FB3000AE66E /* SpinnerLoadingView.swift */; };
 		765B213E1F276048000AE66E /* SpinnerLoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 765B213D1F276048000AE66E /* SpinnerLoadingView.xib */; };
 		765E81581F29F176005C0A11 /* FriendDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765E81571F29F176005C0A11 /* FriendDetailView.swift */; };
+		765E815A1F29F411005C0A11 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765E81591F29F411005C0A11 /* ImageView.swift */; };
+		765E815E1F2A1639005C0A11 /* FriendDetailContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765E815D1F2A1639005C0A11 /* FriendDetailContext.swift */; };
 		767114941F221BEC0085B62B /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767114931F221BEC0085B62B /* UIImageView+Extensions.swift */; };
 		767114961F22202F0085B62B /* FriendsDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 767114951F22202F0085B62B /* FriendsDetailViewController.xib */; };
 		768205951F1F62D600D7780E /* FriendsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768205931F1F62D600D7780E /* FriendsDetailViewController.swift */; };
@@ -96,6 +98,8 @@
 		765B213B1F275FB3000AE66E /* SpinnerLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpinnerLoadingView.swift; sourceTree = "<group>"; };
 		765B213D1F276048000AE66E /* SpinnerLoadingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpinnerLoadingView.xib; sourceTree = "<group>"; };
 		765E81571F29F176005C0A11 /* FriendDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendDetailView.swift; sourceTree = "<group>"; };
+		765E81591F29F411005C0A11 /* ImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
+		765E815D1F2A1639005C0A11 /* FriendDetailContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendDetailContext.swift; sourceTree = "<group>"; };
 		767114931F221BEC0085B62B /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
 		767114951F22202F0085B62B /* FriendsDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FriendsDetailViewController.xib; sourceTree = "<group>"; };
 		768205931F1F62D600D7780E /* FriendsDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsDetailViewController.swift; sourceTree = "<group>"; };
@@ -305,6 +309,7 @@
 			children = (
 				764A8E8E1F1CF7C90052D034 /* LoginContext.swift */,
 				76382F881F1DF4DD00216BB0 /* FillArrayContext.swift */,
+				765E815D1F2A1639005C0A11 /* FriendDetailContext.swift */,
 			);
 			path = Contexts;
 			sourceTree = "<group>";
@@ -330,6 +335,7 @@
 		765B21341F275F5B000AE66E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				765E81591F29F411005C0A11 /* ImageView.swift */,
 				765B21351F275F5B000AE66E /* LoadingViewContainer */,
 			);
 			path = Views;
@@ -514,6 +520,7 @@
 				764A8E4E1F1C9B010052D034 /* UITableView+Extensions.swift in Sources */,
 				76382F8D1F1E1F5500216BB0 /* ObservableObject.swift in Sources */,
 				764E25FF1F28D4CE00D09506 /* URL+Extensions.swift in Sources */,
+				765E815A1F29F411005C0A11 /* ImageView.swift in Sources */,
 				764E25F71F28CF2B00D09506 /* InternetImageModel.swift in Sources */,
 				764E25F31F28CEFD00D09506 /* ImageModel.swift in Sources */,
 				764E25F91F28D02800D09506 /* Model.swift in Sources */,
@@ -524,6 +531,7 @@
 				764A8E631F1CB3A80052D034 /* UserCell.swift in Sources */,
 				76BF82071F26069C00BDC187 /* Curry+Extensions.swift in Sources */,
 				764A8E951F1CF7C90052D034 /* LoginContext.swift in Sources */,
+				765E815E1F2A1639005C0A11 /* FriendDetailContext.swift in Sources */,
 				76382F851F1DEABF00216BB0 /* UserView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
