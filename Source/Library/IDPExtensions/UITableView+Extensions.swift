@@ -10,6 +10,8 @@ import UIKit
 
 extension UITableView {
     
+    @nonobjc static var registeredNib = Dictionary<String, UINib>()
+    
     func dequeueReusableCellWithClass(
         _ cellClass: AnyClass,
         for indexPath: IndexPath
@@ -30,16 +32,18 @@ extension UITableView {
         )
         -> UITableViewCell
     {
-        let cell = self.dequeueReusableCellWithClass(type, for: indexPath)
+        let identifier = String(describing: type)
+        let nib: UINib
+        
+        if (UITableView.registeredNib[identifier] == nil) {
+            nib = UINib.nib(with: type)
+            self.register(nib, forCellReuseIdentifier: identifier)
+            UITableView.registeredNib[identifier] = nib
+        }
+        
+        let cell = self.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
         cast(cell).do(configure)
         
         return cell
-    }
-    
-    func updateWithFunction(function: () -> ()) {
-        self.beginUpdates()
-        function()
-        self.endUpdates()
-    }
-    
+    }  
 }

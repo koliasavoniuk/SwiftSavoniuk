@@ -17,15 +17,14 @@ class FillArrayContext: BaseContext {
     
     override func execute(object: AnyObject , completionHandler: @escaping CompletionHandler) {
         if self.myGraphRequest != nil {
-            self.myGraphRequest!.start { (response, result) in
+            self.myGraphRequest?.start { (response, result) in
                 switch result {
                 case .failed(let error):
                     print("Error in grahp request:", error)
                     break
                 case .success(let GraphResponse):
-                    if let responseDictionary = GraphResponse.dictionaryValue {
-                        print(responseDictionary)
-                        self.processDataWithUsersModel(dictionary: responseDictionary as NSDictionary?, model: (object as? UsersViewController)!)
+                    GraphResponse.dictionaryValue.do {
+                        self.processDataWithUsersModel(dictionary: $0 as NSDictionary?, model: (object as? UsersViewController)!)
                         completionHandler(true)
                     }
                 }
@@ -45,14 +44,14 @@ class FillArrayContext: BaseContext {
         //var userEmail: String?
         if let data = dictionary?["data"] as? Array<NSDictionary> {
             for user in data {
-                if let id = user["id"] as? String {
-                    userID = id
+                user["id"].do {
+                    userID = $0 as? String
                 }
-                if let name = user["name"] as? String {
-                    userName = name
+                user["name"].do {
+                    userName = cast($0)
                 }
-                if let gender = user["gender"] as? String {
-                    userGender = gender
+                user["gender"].do {
+                    userGender = $0 as? String
                 }
                 //if let email = user["email"] as? String {
                 //    userEmail = email

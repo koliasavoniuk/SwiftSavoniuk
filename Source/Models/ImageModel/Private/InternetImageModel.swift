@@ -53,9 +53,9 @@ class  InternetImageModel:  FileSystemModel {
         let localURL = self.localPath
         let urlSession = URLSession.init(configuration: .ephemeral)
         self.sessionTask = urlSession.downloadTask(with: self.url!, completionHandler: { (location, response, error) in
-            if let location = location {
+            location.do {
                 do {
-                    try manager.moveItem(at: location, to: localURL)
+                    try manager.moveItem(at: $0, to: localURL)
                 } catch {
                     print("Error during downloading Image")
                 }

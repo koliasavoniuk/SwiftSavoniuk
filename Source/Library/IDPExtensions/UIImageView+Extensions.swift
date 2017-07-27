@@ -12,9 +12,9 @@ import UIKit
 extension UIImageView {
     func setImageFromURl(stringImageUrl urlString: String){
         
-        if let url = NSURL(string: urlString) {
-            if let data = NSData(contentsOf: url as URL) {
-                self.image = UIImage(data: data as Data)
+        NSURL(string: urlString).do {
+            NSData(contentsOf: $0 as URL).do {
+                self.image = UIImage(data: $0 as Data)
             }
         }
     }

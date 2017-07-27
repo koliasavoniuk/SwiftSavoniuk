@@ -3,6 +3,10 @@
 import UIKit
 
 extension Optional {
+    
+    func `do`(_ execute: (Wrapped) -> ()) {
+        self.map(execute)
+    }
 
 func apply<Value, Result>(_ value: Value?) -> Result?
         where Wrapped == (Value) -> Result
@@ -26,7 +30,7 @@ public func curry<A, B, C, D>(_ f : @escaping (A, B, C) -> D) -> (A) -> (B) -> (
 func cast<Value, Result>(_ value: Value) -> Result? {
     return value as? Result
 }
-
+/*
 func threePar(int: Int, string: String, object: String) {
     print(" threePar - \(threePar)" )
     print("par1 = \(int)")
@@ -53,3 +57,13 @@ let array1 = arrayData.flatMap {
             .apply( (cast(dicFoto?["data"]?["Url"]) ?? "") )
     }
 }
+*/
+
+func unwrap<T>(Value: T?) -> Any {
+    var result: Any = 0
+    Value.flatMap {result = $0}
+    return result
+}
+
+
+//cast(cell).do(configure)

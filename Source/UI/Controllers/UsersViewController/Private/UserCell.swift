@@ -17,10 +17,10 @@ class UserCell: TableViewCell {
         didSet {self.fillWithUser(user: user!)}
     }
     
-    func initCell() {
-        self.fullNameLabel = UILabel()
-        self.userImageView = UIImageView()
-    }
+//    func initCell() {
+//        self.fullNameLabel = UILabel()
+//        self.userImageView = UIImageView()
+//    }
 
     func fillWithUser(user: User) {
         self.fullNameLabel?.text = user.name
