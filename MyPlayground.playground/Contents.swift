@@ -47,8 +47,6 @@ let array1 = arrayData.flatMap {
     $0.flatMap { fbUser in
         var  id = ( fbUser?["id"] as? Int )
         var id2:Int? = cast(fbUser?["id"])
-        //print(id2)
-        // print(id)
         let dicFoto:[String : [String : Any]]? = cast(fbUser?["foto"])
         id.flatMap(creator)
             .apply( fbUser?["name"] as? String )
